@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaagrut™ – Live Online Classes | Bengaluru</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>📍 Bengaluru · Online across India &nbsp;|&nbsp; 📞 <a href="tel:+919620000535">+91 96200 00535</a> &nbsp;|&nbsp; ✉️ <a href="mailto:admin@jaagrut.in">admin@jaagrut.in</a></span>
+  <div class="topbar-r">
+    <!-- <span>New batch · 11 April 2026</span> -->
+    <span class="tb-pill">15 Seats Only</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="goTo('home')">
+    <img src="./Group 1.png" alt="" srcset="" width="140px">
+  </div>
+  <ul class="nav-menu">
+    <li><button class="nav-link" onclick="goTo('home')">Home</button></li>
+    <li><button class="nav-link" onclick="goTo('about')">About Us</button></li>
+    <li class="nav-item">
+      <button class="nav-link">Classes <span class="arr">▾</span></button>
+      <div class="dropdown">
+        <span class="dd-link" onclick="goTo('class9')">Class 9</span>
+        <span class="dd-link" onclick="goTo('class10')">Class 10<span class="tag">Featured</span></span>
+        <span class="dd-link" onclick="goTo('class11')">Class 11 &amp; 12</span>
+        <span class="dd-link" onclick="goTo('jee')">JEE Mains</span>
+        <span class="dd-link" onclick="goTo('neet')">NEET</span>
+      </div>
+    </li>
+    <li><button class="nav-link" onclick="goTo('syllabus')">Syllabus</button></li>
+    <li><button class="nav-link" onclick="goTo('fees')">Fees</button></li>
+    <li><button class="nav-link" onclick="goTo('faqs')">FAQs</button></li>
+    <li><button class="nav-link" onclick="goTo('contact')">Contact</button></li>
+  </ul>
+  <div class="nav-ctas">
+    <button class="btn btn-ghost" onclick="goTo('faqs')">FAQs</button>
+    <button class="btn btn-ghost" onclick="goTo('contact')">Enquire</button>
+    <button class="btn btn-primary" onclick="openAssess()">📋 Book Assessment</button>
+  </div>
+</nav>
+<!-- ════════════════════════════════
+     PAGE: SYLLABUS
+     ════════════════════════════════ -->
+<div class="page active" id="pg-syllabus">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span><span class="sep">›</span><span>Syllabus</span></div>
+      <div class="page-hero-eyebrow">CBSE · ICSE · PUC · Class 9 to 12 · JEE · NEET</div>
+      <h1>Exactly what gets taught —<br>nothing more, nothing less.</h1>
+      <p>Standard board textbooks, done thoroughly. We do not add extra coaching material or ask you to buy supplementary books.</p>
+    </div>
+  </div>
+
+  <section>
+    <div style="margin-bottom:10px">
+      <div class="eyebrow">Select a Class</div>
+      <h2 class="sec">Syllabus by class and board</h2>
+      <p class="sec-sub">Select your child's class below. Where relevant, switch between CBSE, ICSE and PUC tabs inside.</p>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 32px" id="classTabs">
+      <button class="syl-tab active" onclick="switchClass('c9',this)">Class 9</button>
+      <button class="syl-tab" onclick="switchClass('c10',this)">Class 10</button>
+      <button class="syl-tab" onclick="switchClass('c11',this)">Class 11</button>
+      <button class="syl-tab" onclick="switchClass('c12',this)">Class 12</button>
+      <button class="syl-tab" onclick="switchClass('jee',this)">JEE Mains</button>
+      <button class="syl-tab" onclick="switchClass('neet',this)">NEET</button>
+    </div>
+
+    <!-- ── CLASS 9 ── -->
+    <div class="syl-pane active" id="sc-c9">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px">
+        <div><div style="font-size:17px;font-weight:800;color:var(--navy)">Class 9 Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Maths · Physics · Chemistry · Biology — CBSE &amp; ICSE</div></div>
+        <button class="btn btn-primary" onclick="openAssess()" style="font-size:12.5px;padding:8px 16px">Book Assessment →</button>
+      </div>
+      <!-- Board tabs -->
+      <div class="syl-tabs" id="c9-btabs">
+        <button class="syl-tab active" onclick="switchBoard('c9','cbse',this)">CBSE</button>
+        <button class="syl-tab" onclick="switchBoard('c9','icse',this)">ICSE</button>
+      </div>
+      <!-- CBSE Class 9 -->
+      <div class="board-pane active" id="c9-cbse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT Mathematics (Class 9) · NCERT Science (Class 9) · Jaagrut™ Worksheets · Previous year board papers</div>
+        <div class="syl-tabs" id="c9cbse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c9cbse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c9cbse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c9cbse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c9cbse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c9cbse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Number Systems</div><div class="syl-ch">Chapter 1</div></div></div><div class="syl-topics"><div class="syl-t">Irrational numbers and their representation on number line</div><div class="syl-t">Real numbers and their decimal expansions</div><div class="syl-t">Operations on real numbers</div><div class="syl-t">Laws of exponents for real numbers</div></div><div class="syl-foot"><span>Ch 1</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📈</span><div><div class="syl-name">Polynomials</div><div class="syl-ch">Chapter 2</div></div></div><div class="syl-topics"><div class="syl-t">Polynomials in one variable — degrees and coefficients</div><div class="syl-t">Zeroes of a polynomial</div><div class="syl-t">Remainder theorem and factor theorem</div><div class="syl-t">Factorisation using algebraic identities</div></div><div class="syl-foot"><span>Ch 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Geometry — Triangles &amp; Quadrilaterals</div><div class="syl-ch">Ch 5, 7, 8</div></div></div><div class="syl-topics"><div class="syl-t">Introduction to Euclid's geometry</div><div class="syl-t">Congruence rules — SAS, ASA, SSS, RHS</div><div class="syl-t">Properties of triangles and inequalities</div><div class="syl-t">Types of quadrilaterals and their properties</div></div><div class="syl-foot"><span>Ch 5, 7, 8</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Circles, Areas &amp; Volumes</div><div class="syl-ch">Ch 9, 10, 11</div></div></div><div class="syl-topics"><div class="syl-t">Circles and angle subtended by chords</div><div class="syl-t">Surface areas and volumes of solids</div><div class="syl-t">Cuboid, cylinder, cone, sphere</div></div><div class="syl-foot"><span>Ch 9–11</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📊</span><div><div class="syl-name">Statistics &amp; Probability</div><div class="syl-ch">Ch 12, 13</div></div></div><div class="syl-topics"><div class="syl-t">Collection, organisation and representation of data</div><div class="syl-t">Mean, median, mode for ungrouped data</div><div class="syl-t">Bar graphs, histograms, frequency polygons</div><div class="syl-t">Introduction to probability — events and outcomes</div></div><div class="syl-foot"><span>Ch 12, 13</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9cbse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🚀</span><div><div class="syl-name">Motion</div><div class="syl-ch">Chapter 7</div></div></div><div class="syl-topics"><div class="syl-t">Distance vs displacement, speed vs velocity</div><div class="syl-t">Uniform and non-uniform motion</div><div class="syl-t">Equations of motion — derivation and application</div><div class="syl-t">Circular motion and centripetal acceleration</div></div><div class="syl-foot"><span>Ch 7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💪</span><div><div class="syl-name">Force &amp; Newton's Laws</div><div class="syl-ch">Chapter 8</div></div></div><div class="syl-topics"><div class="syl-t">Balanced and unbalanced forces</div><div class="syl-t">Newton's first, second and third laws</div><div class="syl-t">Inertia, momentum, conservation of momentum</div><div class="syl-t">Friction — types and factors</div></div><div class="syl-foot"><span>Ch 8</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌍</span><div><div class="syl-name">Gravitation</div><div class="syl-ch">Chapter 9</div></div></div><div class="syl-topics"><div class="syl-t">Universal law of gravitation</div><div class="syl-t">Free fall and acceleration due to gravity</div><div class="syl-t">Mass vs weight</div><div class="syl-t">Thrust, pressure, Archimedes' principle, buoyancy</div></div><div class="syl-foot"><span>Ch 9</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Work, Energy &amp; Sound</div><div class="syl-ch">Ch 10, 11</div></div></div><div class="syl-topics"><div class="syl-t">Work done, energy and its forms</div><div class="syl-t">Kinetic and potential energy — conservation</div><div class="syl-t">Power and commercial units of energy</div><div class="syl-t">Sound — production, propagation, characteristics</div></div><div class="syl-foot"><span>Ch 10, 11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9cbse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🌡️</span><div><div class="syl-name">Matter in Our Surroundings</div><div class="syl-ch">Chapter 1</div></div></div><div class="syl-topics"><div class="syl-t">States of matter — solid, liquid, gas</div><div class="syl-t">Changes of state — evaporation, sublimation</div><div class="syl-t">Effect of temperature and pressure on states</div><div class="syl-t">Latent heat — fusion and vaporisation</div></div><div class="syl-foot"><span>Ch 1</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧫</span><div><div class="syl-name">Is Matter Around Us Pure?</div><div class="syl-ch">Chapter 2</div></div></div><div class="syl-topics"><div class="syl-t">Mixtures — homogeneous and heterogeneous</div><div class="syl-t">Solutions, colloids and suspensions</div><div class="syl-t">Separation techniques — filtration, distillation, chromatography</div><div class="syl-t">Physical and chemical changes</div></div><div class="syl-foot"><span>Ch 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Atoms, Molecules &amp; Atomic Structure</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Laws of chemical combination</div><div class="syl-t">Dalton's atomic theory, atomic mass</div><div class="syl-t">Mole concept and molecular mass</div><div class="syl-t">Electrons, protons, neutrons — Thomson, Rutherford, Bohr models</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9cbse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Cell — Basic Unit of Life</div><div class="syl-ch">Chapter 5</div></div></div><div class="syl-topics"><div class="syl-t">Prokaryotic vs eukaryotic cells</div><div class="syl-t">Cell organelles and their functions</div><div class="syl-t">Cell membrane, cell wall, nucleus</div><div class="syl-t">Differences between plant and animal cells</div></div><div class="syl-foot"><span>Ch 5</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🧬</span><div><div class="syl-name">Tissues</div><div class="syl-ch">Chapter 6</div></div></div><div class="syl-topics"><div class="syl-t">Plant tissues — meristematic and permanent</div><div class="syl-t">Animal tissues — epithelial, connective, muscular, nervous</div><div class="syl-t">Functions of each tissue type</div></div><div class="syl-foot"><span>Ch 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Diversity &amp; Disease</div><div class="syl-ch">Ch 7, 13</div></div></div><div class="syl-topics"><div class="syl-t">Classification of living organisms</div><div class="syl-t">Five-kingdom classification</div><div class="syl-t">Health, disease, causes and prevention</div><div class="syl-t">Infectious and non-infectious diseases</div></div><div class="syl-foot"><span>Ch 7, 13</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- ICSE Class 9 -->
+      <div class="board-pane" id="c9-icse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> Selina Concise Mathematics (Class 9) · Selina Concise Physics, Chemistry, Biology (Class 9) · Jaagrut™ Worksheets · Previous year ICSE papers</div>
+        <div class="syl-tabs" id="c9icse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c9icse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c9icse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c9icse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c9icse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c9icse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Number Systems &amp; Logarithms</div><div class="syl-ch">Units 1–2</div></div></div><div class="syl-topics"><div class="syl-t">Rational and irrational numbers, real numbers</div><div class="syl-t">Logarithms — laws and applications</div><div class="syl-t">Indices — laws of exponents</div></div><div class="syl-foot"><span>Units 1–2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📈</span><div><div class="syl-name">Algebra</div><div class="syl-ch">Units 3–5</div></div></div><div class="syl-topics"><div class="syl-t">Expansions — algebraic identities</div><div class="syl-t">Factorisation — various methods</div><div class="syl-t">Simultaneous linear equations — graphical and algebraic</div><div class="syl-t">Inequalities and linear programming basics</div></div><div class="syl-foot"><span>Units 3–5</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Geometry</div><div class="syl-ch">Units 8–11</div></div></div><div class="syl-topics"><div class="syl-t">Triangles — congruency and inequalities</div><div class="syl-t">Rectilinear figures — midpoint theorem</div><div class="syl-t">Circles — chord properties, arc theorems</div><div class="syl-t">Constructions — angle bisectors, perpendiculars</div></div><div class="syl-foot"><span>Units 8–11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📊</span><div><div class="syl-name">Mensuration &amp; Statistics</div><div class="syl-ch">Units 13–14</div></div></div><div class="syl-topics"><div class="syl-t">Area and perimeter of plane figures</div><div class="syl-t">Surface areas and volumes of 3D solids</div><div class="syl-t">Mean, median, mode — ungrouped data</div><div class="syl-t">Frequency tables, bar graphs, histograms</div></div><div class="syl-foot"><span>Units 13–14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9icse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">📏</span><div><div class="syl-name">Measurements &amp; Motion</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">SI units, scalar and vector quantities</div><div class="syl-t">Speed, velocity, acceleration</div><div class="syl-t">Equations of motion and graphs</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💪</span><div><div class="syl-name">Laws of Motion &amp; Gravitation</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Newton's laws and their applications</div><div class="syl-t">Momentum and impulse</div><div class="syl-t">Universal law of gravitation</div><div class="syl-t">Acceleration due to gravity, mass vs weight</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Fluids, Work, Energy &amp; Sound</div><div class="syl-ch">Ch 5–7</div></div></div><div class="syl-topics"><div class="syl-t">Pressure in fluids — Archimedes' principle</div><div class="syl-t">Work, power, energy and conservation</div><div class="syl-t">Sound — nature, propagation, SONAR</div></div><div class="syl-foot"><span>Ch 5–7</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9icse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">The Language of Chemistry</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Chemical symbols, formulae and equations</div><div class="syl-t">Balancing chemical equations</div><div class="syl-t">Mole concept and Avogadro's number</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧪</span><div><div class="syl-name">Matter, Atoms &amp; Periodic Table</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Atomic structure — electrons, protons, neutrons</div><div class="syl-t">Electronic configuration</div><div class="syl-t">Newlands' law of octaves, Mendeleev's table</div><div class="syl-t">Modern periodic law and periodicity</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🔩</span><div><div class="syl-name">Chemical Bonding &amp; Reactions</div><div class="syl-ch">Ch 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Ionic and covalent bonds — formation and properties</div><div class="syl-t">Types of chemical reactions</div><div class="syl-t">Energy changes in reactions — exothermic, endothermic</div></div><div class="syl-foot"><span>Ch 5, 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c9icse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Cell Biology &amp; Tissues</div><div class="syl-ch">Ch 2, 3</div></div></div><div class="syl-topics"><div class="syl-t">Cell structure and organelles</div><div class="syl-t">Plant and animal cell differences</div><div class="syl-t">Types of plant and animal tissues</div></div><div class="syl-foot"><span>Ch 2, 3</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Flower, Seed &amp; Leaves</div><div class="syl-ch">Ch 4, 5</div></div></div><div class="syl-topics"><div class="syl-t">Parts of a flower and their functions</div><div class="syl-t">Pollination, fertilisation, seed dispersal</div><div class="syl-t">Types of leaves and venation</div></div><div class="syl-foot"><span>Ch 4, 5</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">💪</span><div><div class="syl-name">Skeleton, Skin &amp; Nervous System</div><div class="syl-ch">Ch 13–15</div></div></div><div class="syl-topics"><div class="syl-t">Human skeletal system — bones and joints</div><div class="syl-t">Skin — structure and functions</div><div class="syl-t">Nervous system — neurons, brain, spinal cord</div></div><div class="syl-foot"><span>Ch 13–15</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CLASS 10 ── -->
+    <div class="syl-pane" id="sc-c10">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px">
+        <div><div style="font-size:17px;font-weight:800;color:var(--navy)">Class 10 Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Maths · Physics · Chemistry · Biology — CBSE &amp; ICSE</div></div>
+        <button class="btn btn-primary" onclick="openAssess()" style="font-size:12.5px;padding:8px 16px">Book Assessment →</button>
+      </div>
+      <div class="syl-tabs" id="c10-btabs">
+        <button class="syl-tab active" onclick="switchBoard('c10','cbse',this)">CBSE</button>
+        <button class="syl-tab" onclick="switchBoard('c10','icse',this)">ICSE</button>
+      </div>
+      <!-- CBSE Class 10 -->
+      <div class="board-pane active" id="c10-cbse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT Science (Class 10) · NCERT Mathematics (Class 10) · Jaagrut™ Worksheets · Previous year CBSE board papers</div>
+        <div class="syl-tabs" id="c10cbse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c10cbse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c10cbse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c10cbse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c10cbse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c10cbse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💡</span><div><div class="syl-name">Light — Reflection &amp; Refraction</div><div class="syl-ch">Chapter 10</div></div></div><div class="syl-topics"><div class="syl-t">Laws of reflection; image in plane and spherical mirrors</div><div class="syl-t">Mirror formula, magnification, sign convention</div><div class="syl-t">Refraction — Snell's law, refractive index</div><div class="syl-t">Refraction through glass slab; total internal reflection</div><div class="syl-t">Lenses — convex, concave; lens formula; power of a lens</div></div><div class="syl-foot"><span>Ch 10</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">👁️</span><div><div class="syl-name">Human Eye &amp; Colourful World</div><div class="syl-ch">Chapter 11</div></div></div><div class="syl-topics"><div class="syl-t">Structure and working of the human eye</div><div class="syl-t">Power of accommodation; near and far point</div><div class="syl-t">Myopia, hypermetropia, presbyopia — correction</div><div class="syl-t">Dispersion by a glass prism; formation of spectrum</div><div class="syl-t">Atmospheric refraction, Tyndall effect, blue sky, rainbow</div></div><div class="syl-foot"><span>Ch 11</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electricity</div><div class="syl-ch">Chapter 12</div></div></div><div class="syl-topics"><div class="syl-t">Electric current, potential difference, circuit symbols</div><div class="syl-t">Ohm's Law — V-I characteristics, resistance</div><div class="syl-t">Resistivity; factors affecting resistance</div><div class="syl-t">Series and parallel combinations — derivation</div><div class="syl-t">Heating effect — Joule's law; power and energy</div></div><div class="syl-foot"><span>Ch 12</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🧲</span><div><div class="syl-name">Magnetic Effects of Current</div><div class="syl-ch">Chapter 13</div></div></div><div class="syl-topics"><div class="syl-t">Magnetic field lines; field due to a straight conductor</div><div class="syl-t">Oersted's experiment; solenoid and bar magnet analogy</div><div class="syl-t">Force on a current-carrying conductor; Fleming's left-hand rule</div><div class="syl-t">Electric motor — principle and working</div><div class="syl-t">Electromagnetic induction; AC and DC; electric generator</div></div><div class="syl-foot"><span>Ch 13</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10cbse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚗️</span><div><div class="syl-name">Chemical Reactions &amp; Equations</div><div class="syl-ch">Chapter 1</div></div></div><div class="syl-topics"><div class="syl-t">Writing and balancing chemical equations</div><div class="syl-t">Combination, decomposition, displacement reactions</div><div class="syl-t">Double displacement and precipitation reactions</div><div class="syl-t">Oxidation and reduction — loss/gain of oxygen/hydrogen</div><div class="syl-t">Corrosion and rancidity — real-world applications</div></div><div class="syl-foot"><span>Ch 1</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧫</span><div><div class="syl-name">Acids, Bases &amp; Salts</div><div class="syl-ch">Chapter 2</div></div></div><div class="syl-topics"><div class="syl-t">Chemical properties of acids and bases with metals, oxides</div><div class="syl-t">pH scale; indicators — litmus, phenolphthalein</div><div class="syl-t">Neutralisation; salt formation</div><div class="syl-t">Important salts — NaCl, NaOH, Na₂CO₃, baking soda, bleaching powder</div></div><div class="syl-foot"><span>Ch 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🔩</span><div><div class="syl-name">Metals and Non-metals</div><div class="syl-ch">Chapter 3</div></div></div><div class="syl-topics"><div class="syl-t">Physical and chemical properties of metals and non-metals</div><div class="syl-t">Reactivity series and its applications</div><div class="syl-t">Ionic compounds — formation and properties</div><div class="syl-t">Extraction of metals — occurrence and methods</div><div class="syl-t">Corrosion — prevention methods</div></div><div class="syl-foot"><span>Ch 3</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Carbon and its Compounds</div><div class="syl-ch">Chapter 4</div></div></div><div class="syl-topics"><div class="syl-t">Bonding in carbon — covalent character, tetravalency</div><div class="syl-t">Saturated and unsaturated compounds; homologous series</div><div class="syl-t">Functional groups — alcohol, aldehyde, ketone, carboxylic acid</div><div class="syl-t">Chemical properties — combustion, addition, substitution</div><div class="syl-t">Soaps, detergents and their cleansing action</div></div><div class="syl-foot"><span>Ch 4</span><span style="color:var(--orange);font-weight:700">5 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10cbse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Real Numbers &amp; Polynomials</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Euclid's division lemma and algorithm</div><div class="syl-t">Fundamental theorem of arithmetic</div><div class="syl-t">Irrational numbers — proofs of √2, √3</div><div class="syl-t">Zeroes of a polynomial; relationship with coefficients</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📉</span><div><div class="syl-name">Pair of Linear &amp; Quadratic Equations</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Graphical and algebraic methods for linear equations</div><div class="syl-t">Substitution, elimination and cross-multiplication</div><div class="syl-t">Quadratic equations — factorisation, completing the square</div><div class="syl-t">Discriminant and nature of roots; quadratic formula</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Triangles &amp; Coordinate Geometry</div><div class="syl-ch">Ch 6, 7</div></div></div><div class="syl-topics"><div class="syl-t">Similar triangles — AA, SAS, SSS criteria</div><div class="syl-t">Pythagoras theorem — proof and converse</div><div class="syl-t">Distance formula, section formula</div><div class="syl-t">Area of triangle using coordinates</div></div><div class="syl-foot"><span>Ch 6, 7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Trigonometry, Circles &amp; Areas</div><div class="syl-ch">Ch 8, 9, 10, 12</div></div></div><div class="syl-topics"><div class="syl-t">Trigonometric ratios, identities and complementary angles</div><div class="syl-t">Heights and distances — angle of elevation and depression</div><div class="syl-t">Tangent to a circle — theorems and problems</div><div class="syl-t">Areas of circle, sector, segment; combined figures</div></div><div class="syl-foot"><span>Ch 8–12</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📊</span><div><div class="syl-name">Statistics &amp; Probability</div><div class="syl-ch">Ch 13, 14</div></div></div><div class="syl-topics"><div class="syl-t">Mean, median, mode for grouped data</div><div class="syl-t">Cumulative frequency; ogive; median from graph</div><div class="syl-t">Classical probability — theoretical approach</div><div class="syl-t">Problems on single events</div></div><div class="syl-foot"><span>Ch 13, 14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10cbse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Life Processes</div><div class="syl-ch">Chapter 6</div></div></div><div class="syl-topics"><div class="syl-t">Nutrition — autotrophic (photosynthesis) and heterotrophic</div><div class="syl-t">Respiration — aerobic and anaerobic; ATP</div><div class="syl-t">Transportation in plants (xylem, phloem) and humans (blood, heart)</div><div class="syl-t">Excretion — nephron structure and urine formation</div></div><div class="syl-foot"><span>Ch 6</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🧠</span><div><div class="syl-name">Control &amp; Coordination</div><div class="syl-ch">Chapter 7</div></div></div><div class="syl-topics"><div class="syl-t">Neurons — structure and types; synapse</div><div class="syl-t">Reflex action and reflex arc</div><div class="syl-t">Human brain — cerebrum, cerebellum, medulla</div><div class="syl-t">Endocrine system — hormones and their roles; feedback mechanism</div></div><div class="syl-foot"><span>Ch 7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Heredity and Evolution</div><div class="syl-ch">Chapter 9</div></div></div><div class="syl-topics"><div class="syl-t">Mendel's laws — dominance, segregation, independent assortment</div><div class="syl-t">Monohybrid and dihybrid crosses; Punnett square</div><div class="syl-t">Sex determination in humans</div><div class="syl-t">Evolution — natural selection, speciation, fossil evidence</div></div><div class="syl-foot"><span>Ch 9</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌎</span><div><div class="syl-name">Environment &amp; Natural Resources</div><div class="syl-ch">Ch 13, 14</div></div></div><div class="syl-topics"><div class="syl-t">Ecosystem — biotic and abiotic components, food chains</div><div class="syl-t">Ozone layer — depletion, UV radiation effects</div><div class="syl-t">Biodegradable vs non-biodegradable waste</div><div class="syl-t">Conservation of water, forests, coal, petroleum</div></div><div class="syl-foot"><span>Ch 13, 14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- ICSE Class 10 -->
+      <div class="board-pane" id="c10-icse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> Selina Concise Mathematics (Class 10) · Selina Concise Physics, Chemistry, Biology (Class 10) · Jaagrut™ Worksheets · Previous year ICSE papers</div>
+        <div class="syl-tabs" id="c10icse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c10icse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c10icse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c10icse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c10icse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c10icse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Commercial Maths &amp; Algebra</div><div class="syl-ch">Units 1–3</div></div></div><div class="syl-topics"><div class="syl-t">GST, banking, shares and dividends</div><div class="syl-t">Linear inequations in one variable</div><div class="syl-t">Quadratic equations — factorisation and formula</div><div class="syl-t">AP and GP — general term, sum of terms</div></div><div class="syl-foot"><span>Units 1–3</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Geometry</div><div class="syl-ch">Unit 4</div></div></div><div class="syl-topics"><div class="syl-t">Similarity — conditions, maps, models</div><div class="syl-t">Circles — chord properties, tangent-secant theorems</div><div class="syl-t">Constructions — tangents, circumscribed and inscribed circles</div></div><div class="syl-foot"><span>Unit 4</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Trigonometry &amp; Coordinate Geometry</div><div class="syl-ch">Units 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Trigonometric identities — proof and application</div><div class="syl-t">Heights and distances — practical problems</div><div class="syl-t">Reflection and section formula in coordinate geometry</div></div><div class="syl-foot"><span>Units 5, 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📊</span><div><div class="syl-name">Mensuration &amp; Statistics</div><div class="syl-ch">Units 7, 8</div></div></div><div class="syl-topics"><div class="syl-t">Surface area and volume — cylinder, cone, sphere, combined</div><div class="syl-t">Mean, median, mode for grouped data</div><div class="syl-t">Ogive — median from graph</div><div class="syl-t">Probability — complementary and combined events</div></div><div class="syl-foot"><span>Units 7, 8</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10icse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚙️</span><div><div class="syl-name">Force, Work &amp; Power</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Turning forces — moment of a force, couple</div><div class="syl-t">Simple machines — levers, pulleys, inclined plane</div><div class="syl-t">Work, energy, power and their units</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌡️</span><div><div class="syl-name">Light, Sound &amp; Heat</div><div class="syl-ch">Ch 4–6</div></div></div><div class="syl-topics"><div class="syl-t">Refraction, lenses, power of a lens</div><div class="syl-t">Sound — resonance, forced vibration</div><div class="syl-t">Calorimetry — specific heat capacity, latent heat</div></div><div class="syl-foot"><span>Ch 4–6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electricity &amp; Radioactivity</div><div class="syl-ch">Ch 7–9</div></div></div><div class="syl-topics"><div class="syl-t">Ohm's law, resistance in series and parallel</div><div class="syl-t">Household circuits, fuse, earthing, power calculations</div><div class="syl-t">Radioactivity — alpha, beta, gamma radiation; nuclear reactions</div></div><div class="syl-foot"><span>Ch 7–9</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10icse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Periodic Table &amp; Chemical Bonding</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Modern periodic law; trends — atomic radius, ionisation energy</div><div class="syl-t">Electrovalent and covalent bonding</div><div class="syl-t">Coordinate bonding; metallic bonding</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧪</span><div><div class="syl-name">Acids, Bases, Salts &amp; Electrolysis</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Arrhenius theory; strong and weak acids and bases</div><div class="syl-t">Salt hydrolysis; pH scale</div><div class="syl-t">Electrolysis — electrolytic cells, Faraday's laws</div><div class="syl-t">Electroplating and its applications</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🔩</span><div><div class="syl-name">Metallurgy &amp; Organic Chemistry</div><div class="syl-ch">Ch 5–7</div></div></div><div class="syl-topics"><div class="syl-t">Occurrence and extraction of metals</div><div class="syl-t">Alloys — composition and uses</div><div class="syl-t">Organic chemistry — hydrocarbons, functional groups</div><div class="syl-t">Alcohols, carboxylic acids — preparation and properties</div></div><div class="syl-foot"><span>Ch 5–7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c10icse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Plant Physiology</div><div class="syl-ch">Ch 4–6</div></div></div><div class="syl-topics"><div class="syl-t">Absorption and conduction of water and minerals</div><div class="syl-t">Transpiration — stomata structure and function</div><div class="syl-t">Photosynthesis — light and dark reactions</div></div><div class="syl-foot"><span>Ch 4–6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🫀</span><div><div class="syl-name">Human Organ Systems</div><div class="syl-ch">Ch 7–11</div></div></div><div class="syl-topics"><div class="syl-t">Circulatory system — heart, blood vessels, blood groups</div><div class="syl-t">Excretory system — kidneys, nephron, dialysis</div><div class="syl-t">Nervous system — brain, spinal cord, reflexes</div><div class="syl-t">Endocrine system — hormones and their effects</div></div><div class="syl-foot"><span>Ch 7–11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Genetics &amp; Population</div><div class="syl-ch">Ch 19, 20</div></div></div><div class="syl-topics"><div class="syl-t">Genetics — Mendel's laws, monohybrid cross</div><div class="syl-t">Sex determination; sex-linked traits</div><div class="syl-t">Population — growth, control measures</div></div><div class="syl-foot"><span>Ch 19, 20</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CLASS 11 ── -->
+    <div class="syl-pane" id="sc-c11">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px">
+        <div><div style="font-size:17px;font-weight:800;color:var(--navy)">Class 11 Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Maths · Physics · Chemistry · Biology — CBSE, ICSE &amp; PUC (Karnataka)</div></div>
+        <button class="btn btn-primary" onclick="openAssess()" style="font-size:12.5px;padding:8px 16px">Book Assessment →</button>
+      </div>
+      <div class="syl-tabs" id="c11-btabs">
+        <button class="syl-tab active" onclick="switchBoard('c11','cbse',this)">CBSE</button>
+        <button class="syl-tab" onclick="switchBoard('c11','icse',this)">ISC</button>
+        <button class="syl-tab" onclick="switchBoard('c11','puc',this)">PUC (Karnataka)</button>
+      </div>
+      <!-- CBSE 11 -->
+      <div class="board-pane active" id="c11-cbse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT Mathematics Part 1 &amp; 2 (Class 11) · NCERT Physics Part 1 &amp; 2 · NCERT Chemistry Part 1 &amp; 2 · NCERT Biology · Jaagrut™ Worksheets</div>
+        <div class="syl-tabs" id="c11cbse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c11cbse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c11cbse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c11cbse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c11cbse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c11cbse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Sets, Relations &amp; Functions</div><div class="syl-ch">Ch 1–3</div></div></div><div class="syl-topics"><div class="syl-t">Sets — types, operations, Venn diagrams</div><div class="syl-t">Ordered pairs, Cartesian product, relations</div><div class="syl-t">Functions — domain, codomain, range; types of functions</div></div><div class="syl-foot"><span>Ch 1–3</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Trigonometry</div><div class="syl-ch">Ch 3</div></div></div><div class="syl-topics"><div class="syl-t">Radian and degree measures; arc length formula</div><div class="syl-t">Trigonometric functions and their graphs</div><div class="syl-t">Compound angles, multiple and sub-multiple angles</div><div class="syl-t">Sine and cosine rule; inverse trig (brief)</div></div><div class="syl-foot"><span>Ch 3</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔡</span><div><div class="syl-name">Algebra</div><div class="syl-ch">Ch 4–9</div></div></div><div class="syl-topics"><div class="syl-t">Complex numbers — Argand plane, modulus, argument</div><div class="syl-t">Quadratic equations with complex roots</div><div class="syl-t">Permutations, combinations, binomial theorem</div><div class="syl-t">Sequences and series — AP, GP, AM-GM inequality</div></div><div class="syl-foot"><span>Ch 4–9</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">∫</span><div><div class="syl-name">Calculus &amp; Statistics</div><div class="syl-ch">Ch 13–16</div></div></div><div class="syl-topics"><div class="syl-t">Limits — definition, standard limits, algebra of limits</div><div class="syl-t">Derivatives — first principles, product/quotient/chain rules</div><div class="syl-t">Statistics — measures of dispersion; variance and SD</div><div class="syl-t">Probability — classical; addition and multiplication theorems</div></div><div class="syl-foot"><span>Ch 13–16</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11cbse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">📏</span><div><div class="syl-name">Units, Motion &amp; Laws</div><div class="syl-ch">Ch 1–5</div></div></div><div class="syl-topics"><div class="syl-t">SI units, dimensional analysis</div><div class="syl-t">Kinematics — motion in straight line and plane</div><div class="syl-t">Projectile motion, circular motion</div><div class="syl-t">Newton's laws, friction, circular motion dynamics</div></div><div class="syl-foot"><span>Ch 1–5</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Work, Energy &amp; Rotational Motion</div><div class="syl-ch">Ch 6, 7</div></div></div><div class="syl-topics"><div class="syl-t">Work-energy theorem; conservative and non-conservative forces</div><div class="syl-t">Elastic and inelastic collisions</div><div class="syl-t">Rotational kinematics; moment of inertia; torque</div><div class="syl-t">Angular momentum — conservation</div></div><div class="syl-foot"><span>Ch 6, 7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌊</span><div><div class="syl-name">Gravitation, Fluids &amp; Thermodynamics</div><div class="syl-ch">Ch 8–11</div></div></div><div class="syl-topics"><div class="syl-t">Kepler's laws; gravitational potential energy; escape velocity</div><div class="syl-t">Mechanical properties of solids and fluids; Bernoulli's theorem</div><div class="syl-t">Thermal expansion; specific heat; calorimetry</div><div class="syl-t">Thermodynamic processes; first and second law; heat engine</div></div><div class="syl-foot"><span>Ch 8–11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🎵</span><div><div class="syl-name">Oscillations &amp; Waves</div><div class="syl-ch">Ch 14, 15</div></div></div><div class="syl-topics"><div class="syl-t">Simple harmonic motion — period, frequency, energy</div><div class="syl-t">Damped oscillations; resonance</div><div class="syl-t">Transverse and longitudinal waves; wave equation</div><div class="syl-t">Speed of sound; beats; Doppler effect</div></div><div class="syl-foot"><span>Ch 14, 15</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11cbse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Basic Concepts &amp; Atomic Structure</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Mole concept, stoichiometry, limiting reagent</div><div class="syl-t">Quantum mechanical model of atom; orbitals</div><div class="syl-t">Aufbau principle, Hund's rule, Pauli exclusion</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">📋</span><div><div class="syl-name">Periodic Table &amp; Chemical Bonding</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Periodic trends — ionisation energy, electron affinity, atomic radius</div><div class="syl-t">Ionic, covalent and metallic bonds</div><div class="syl-t">VSEPR theory; hybridisation; molecular orbital theory (brief)</div><div class="syl-t">Hydrogen bonding and its effects</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🌡️</span><div><div class="syl-name">States of Matter &amp; Thermodynamics</div><div class="syl-ch">Ch 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Gas laws — Boyle's, Charles', Avogadro's; ideal gas equation</div><div class="syl-t">Kinetic molecular theory; real gases; van der Waals equation</div><div class="syl-t">Thermodynamic functions — enthalpy, entropy, Gibbs free energy</div><div class="syl-t">Hess's law; bond enthalpy; spontaneity of reactions</div></div><div class="syl-foot"><span>Ch 5, 6</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Equilibrium &amp; Organic Chemistry</div><div class="syl-ch">Ch 7, 12–14</div></div></div><div class="syl-topics"><div class="syl-t">Chemical equilibrium — Le Chatelier's principle</div><div class="syl-t">Ionic equilibrium — Kw, pH, buffer solutions</div><div class="syl-t">Hydrocarbons — alkanes, alkenes, alkynes, benzene</div><div class="syl-t">IUPAC nomenclature; isomerism; reaction mechanisms</div></div><div class="syl-foot"><span>Ch 7, 12–14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11cbse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Cell Biology &amp; Biomolecules</div><div class="syl-ch">Ch 8, 9</div></div></div><div class="syl-topics"><div class="syl-t">Cell theory; prokaryotic and eukaryotic cell structure</div><div class="syl-t">Cell organelles — ER, Golgi, mitochondria, ribosomes</div><div class="syl-t">Biomolecules — carbohydrates, proteins, lipids, nucleic acids</div><div class="syl-t">Enzymes — mechanism, factors affecting activity</div></div><div class="syl-foot"><span>Ch 8, 9</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Plant Physiology</div><div class="syl-ch">Ch 11–15</div></div></div><div class="syl-topics"><div class="syl-t">Transport in plants — water potential, osmosis, plasmolysis</div><div class="syl-t">Mineral nutrition — macro and micronutrients</div><div class="syl-t">Photosynthesis — light reaction, Calvin cycle</div><div class="syl-t">Respiration — glycolysis, Krebs cycle, electron transport chain</div></div><div class="syl-foot"><span>Ch 11–15</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">👁️</span><div><div class="syl-name">Human Physiology</div><div class="syl-ch">Ch 16–21</div></div></div><div class="syl-topics"><div class="syl-t">Digestion and absorption — alimentary canal, enzymes</div><div class="syl-t">Breathing and gas exchange; respiratory volumes</div><div class="syl-t">Circulation — cardiac cycle, ECG, blood pressure</div><div class="syl-t">Excretion — nephron in detail; urine formation; osmoregulation</div></div><div class="syl-foot"><span>Ch 16–21</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- ISC 11 -->
+      <div class="board-pane" id="c11-icse">
+        <div style="margin-bottom:12px;padding:12px 14px;background:var(--navy-lt);border-radius:var(--radius);font-size:13px;color:var(--navy)">ISC Class 11 follows the same core subjects as CBSE — Mathematics, Physics, Chemistry and Biology — with minor differences in syllabus sequencing and some additional topics in Mathematics (Statistics in depth, linear programming in Year 1). Jaagrut™ covers the full ISC scope using Selina/ML Aggarwal for Maths and ISC-mapped NCERT editions for Science subjects.</div>
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Mathematics — ISC Additions</div><div class="syl-ch">Class 11</div></div></div><div class="syl-topics"><div class="syl-t">Sets, relations, functions (same as CBSE)</div><div class="syl-t">Matrices and determinants introduced in Class 11 (unlike CBSE)</div><div class="syl-t">Boolean algebra — basic introduction</div><div class="syl-t">Statistics — variance, SD, skewness (deeper coverage)</div></div><div class="syl-foot"><span>ISC scope</span><span style="color:var(--orange);font-weight:700">4 additions</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Physics — ISC Specifics</div><div class="syl-ch">Class 11</div></div></div><div class="syl-topics"><div class="syl-t">Largely mirrors CBSE Class 11 Physics</div><div class="syl-t">Greater numerical problem emphasis in ISC</div><div class="syl-t">Practical component — lab work included</div></div><div class="syl-foot"><span>ISC scope</span><span style="color:var(--orange);font-weight:700">3 notes</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧪</span><div><div class="syl-name">Chemistry — ISC Specifics</div><div class="syl-ch">Class 11</div></div></div><div class="syl-topics"><div class="syl-t">Analytical chemistry — qualitative analysis introduced earlier</div><div class="syl-t">Greater emphasis on inorganic chemistry in ISC</div><div class="syl-t">Practical — salt analysis, titration</div></div><div class="syl-foot"><span>ISC scope</span><span style="color:var(--orange);font-weight:700">3 notes</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Biology — ISC Specifics</div><div class="syl-ch">Class 11</div></div></div><div class="syl-topics"><div class="syl-t">Largely mirrors CBSE Class 11 Biology</div><div class="syl-t">Practical — slides, staining, dissection charts</div><div class="syl-t">Morphology of plants and animals covered in more detail</div></div><div class="syl-foot"><span>ISC scope</span><span style="color:var(--orange);font-weight:700">3 notes</span></div></div>
+        </div>
+      </div>
+      <!-- PUC 11 -->
+      <div class="board-pane" id="c11-puc">
+        <div style="margin-bottom:12px;padding:12px 14px;background:var(--orange-lt);border-radius:var(--radius);font-size:13px;color:var(--text);border-left:4px solid var(--orange)">PUC I (First Year Pre-University) is offered by the Department of Pre-University Education, Karnataka. The syllabus is prescribed by the Karnataka PUE Board. Jaagrut™ covers Maths, Physics, Chemistry and Biology for PUC I and II.</div>
+        <div class="syl-tabs" id="c11puc-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c11puc','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c11puc','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c11puc','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c11puc','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c11puc-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Sets, Relations &amp; Functions</div><div class="syl-ch">Unit 1</div></div></div><div class="syl-topics"><div class="syl-t">Sets, operations, Venn diagrams</div><div class="syl-t">Relations — equivalence relations</div><div class="syl-t">Functions — injective, surjective, bijective</div></div><div class="syl-foot"><span>Unit 1</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Trigonometry &amp; Algebra</div><div class="syl-ch">Units 2–4</div></div></div><div class="syl-topics"><div class="syl-t">Trigonometric functions and identities</div><div class="syl-t">Compound angles, multiple angles</div><div class="syl-t">Principle of mathematical induction</div><div class="syl-t">Complex numbers; linear inequalities; permutations</div></div><div class="syl-foot"><span>Units 2–4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Coordinate Geometry</div><div class="syl-ch">Unit 5</div></div></div><div class="syl-topics"><div class="syl-t">Straight lines — slope, forms of equations</div><div class="syl-t">Circles — standard and general equations</div><div class="syl-t">Parabola, ellipse, hyperbola — standard forms</div></div><div class="syl-foot"><span>Unit 5</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">∫</span><div><div class="syl-name">Calculus &amp; Statistics</div><div class="syl-ch">Units 6, 7</div></div></div><div class="syl-topics"><div class="syl-t">Limits and derivatives — first principles</div><div class="syl-t">Differentiation rules — product, chain, quotient</div><div class="syl-t">Statistics — mean deviation, variance, SD</div><div class="syl-t">Probability — classical and addition theorem</div></div><div class="syl-foot"><span>Units 6, 7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11puc-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">📏</span><div><div class="syl-name">Physical World, Units &amp; Motion</div><div class="syl-ch">Ch 1–4</div></div></div><div class="syl-topics"><div class="syl-t">Scope of physics; units and measurement; significant figures</div><div class="syl-t">Motion in a straight line — kinematics equations</div><div class="syl-t">Motion in a plane — vectors, projectile, circular</div></div><div class="syl-foot"><span>Ch 1–4</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💪</span><div><div class="syl-name">Laws of Motion &amp; Work-Energy</div><div class="syl-ch">Ch 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Newton's laws; inertia; friction types</div><div class="syl-t">Conservation of momentum</div><div class="syl-t">Work-energy theorem; potential energy; conservation</div></div><div class="syl-foot"><span>Ch 5, 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌍</span><div><div class="syl-name">Gravitation, Properties of Matter</div><div class="syl-ch">Ch 8, 9</div></div></div><div class="syl-topics"><div class="syl-t">Universal gravitation; gravitational potential</div><div class="syl-t">Orbital velocity, escape velocity, satellites</div><div class="syl-t">Elastic behaviour; viscosity; surface tension</div></div><div class="syl-foot"><span>Ch 8, 9</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌡️</span><div><div class="syl-name">Thermodynamics &amp; Oscillations</div><div class="syl-ch">Ch 11–14</div></div></div><div class="syl-topics"><div class="syl-t">Thermal properties; calorimetry; specific heat</div><div class="syl-t">First and second law of thermodynamics; Carnot engine</div><div class="syl-t">SHM — amplitude, period, energy</div><div class="syl-t">Wave motion; superposition; stationary waves</div></div><div class="syl-foot"><span>Ch 11–14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11puc-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Basic Chemistry &amp; Atomic Structure</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Mole concept; stoichiometry; empirical formula</div><div class="syl-t">Quantum numbers; shapes of orbitals</div><div class="syl-t">Electronic configuration and stability</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">📋</span><div><div class="syl-name">Periodic Table &amp; Bonding</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Periodic law; periodic properties in detail</div><div class="syl-t">Ionic, covalent and coordinate bonding</div><div class="syl-t">VSEPR; hybridisation; dipole moment</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🌡️</span><div><div class="syl-name">States of Matter &amp; Thermodynamics</div><div class="syl-ch">Ch 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Ideal and real gases; van der Waals equation</div><div class="syl-t">Enthalpy, entropy, Gibbs energy</div><div class="syl-t">Spontaneity and thermodynamic criteria</div></div><div class="syl-foot"><span>Ch 5, 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Equilibrium &amp; Redox / Organic</div><div class="syl-ch">Ch 7, 8, 12</div></div></div><div class="syl-topics"><div class="syl-t">Equilibrium — Kc, Kp, Le Chatelier's principle</div><div class="syl-t">Redox reactions; oxidation number</div><div class="syl-t">Organic chemistry basics; IUPAC; isomerism</div></div><div class="syl-foot"><span>Ch 7, 8, 12</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c11puc-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Diversity &amp; Structural Organisation</div><div class="syl-ch">Units 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Classification — five kingdoms; Binomial nomenclature</div><div class="syl-t">Morphology of plants and animals</div><div class="syl-t">Animal kingdom — basis of classification</div></div><div class="syl-foot"><span>Units 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Cell Biology &amp; Biomolecules</div><div class="syl-ch">Units 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Cell organelles and their functions</div><div class="syl-t">Cell division — mitosis and meiosis</div><div class="syl-t">Biomolecules — structure and function</div><div class="syl-t">Enzymes — cofactors, inhibition, mechanism</div></div><div class="syl-foot"><span>Units 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Plant Physiology</div><div class="syl-ch">Unit 5</div></div></div><div class="syl-topics"><div class="syl-t">Transport in plants — osmosis, xylem, phloem</div><div class="syl-t">Mineral nutrition; nitrogen fixation</div><div class="syl-t">Photosynthesis — light and dark reactions; C4 cycle</div><div class="syl-t">Respiration — substrate level and oxidative phosphorylation</div></div><div class="syl-foot"><span>Unit 5</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CLASS 12 ── -->
+    <div class="syl-pane" id="sc-c12">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:18px">
+        <div><div style="font-size:17px;font-weight:800;color:var(--navy)">Class 12 Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Maths · Physics · Chemistry · Biology — CBSE, ISC &amp; PUC (Karnataka)</div></div>
+        <button class="btn btn-primary" onclick="openAssess()" style="font-size:12.5px;padding:8px 16px">Book Assessment →</button>
+      </div>
+      <div class="syl-tabs" id="c12-btabs">
+        <button class="syl-tab active" onclick="switchBoard('c12','cbse',this)">CBSE</button>
+        <button class="syl-tab" onclick="switchBoard('c12','icse',this)">ISC</button>
+        <button class="syl-tab" onclick="switchBoard('c12','puc',this)">PUC (Karnataka)</button>
+      </div>
+      <!-- CBSE 12 -->
+      <div class="board-pane active" id="c12-cbse">
+        <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT Mathematics Part 1 &amp; 2 (Class 12) · NCERT Physics, Chemistry, Biology (Class 12) · Jaagrut™ Worksheets · Previous year CBSE board papers</div>
+        <div class="syl-tabs" id="c12cbse-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c12cbse','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c12cbse','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c12cbse','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c12cbse','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c12cbse-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Relations, Functions &amp; Inverse Trig</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Types of relations; bijective functions; composition</div><div class="syl-t">Binary operations</div><div class="syl-t">Inverse trigonometric functions — principal values, properties</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔡</span><div><div class="syl-name">Algebra — Matrices &amp; Determinants</div><div class="syl-ch">Ch 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Matrix operations — addition, multiplication, transpose</div><div class="syl-t">Invertible matrices; elementary row operations</div><div class="syl-t">Determinants — properties, cofactors, adjoint, inverse</div><div class="syl-t">Applications — solving system of equations; Cramer's rule</div></div><div class="syl-foot"><span>Ch 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">∫</span><div><div class="syl-name">Calculus</div><div class="syl-ch">Ch 5–8</div></div></div><div class="syl-topics"><div class="syl-t">Continuity and differentiability; derivatives of implicit functions</div><div class="syl-t">Applications — tangents, normals, maxima, minima; rate of change</div><div class="syl-t">Integration — by substitution, by parts, by partial fractions</div><div class="syl-t">Definite integrals; area under curves; differential equations</div></div><div class="syl-foot"><span>Ch 5–8</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Vectors, 3D Geometry &amp; Probability</div><div class="syl-ch">Ch 10–13</div></div></div><div class="syl-topics"><div class="syl-t">Vectors — dot product, cross product; scalar triple product</div><div class="syl-t">3D geometry — direction cosines; equation of line and plane</div><div class="syl-t">Angle between lines and planes; shortest distance</div><div class="syl-t">Probability — Bayes' theorem; probability distributions; Bernoulli trials</div></div><div class="syl-foot"><span>Ch 10–13</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12cbse-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electrostatics &amp; Current Electricity</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Coulomb's law; electric field, flux; Gauss's theorem</div><div class="syl-t">Electric potential; capacitors — series, parallel, dielectric</div><div class="syl-t">Ohm's law; resistivity; Kirchhoff's laws; Wheatstone bridge</div><div class="syl-t">Potentiometer; internal resistance; EMF</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🧲</span><div><div class="syl-name">Magnetism &amp; Electromagnetic Induction</div><div class="syl-ch">Ch 4, 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">Biot-Savart law; Ampere's law; solenoid and toroid</div><div class="syl-t">Force between current-carrying conductors; galvanometer</div><div class="syl-t">Faraday's laws; Lenz's law; self and mutual inductance</div><div class="syl-t">Alternating current; LC and LCR circuits; resonance; power factor</div></div><div class="syl-foot"><span>Ch 4–6</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💡</span><div><div class="syl-name">Optics</div><div class="syl-ch">Ch 9, 10</div></div></div><div class="syl-topics"><div class="syl-t">Ray optics — mirrors, refraction, prism, lens, microscope, telescope</div><div class="syl-t">Wave optics — Huygens' principle; interference; Young's double slit</div><div class="syl-t">Diffraction — single slit; resolving power</div><div class="syl-t">Polarisation — Brewster's law; Malus's law</div></div><div class="syl-foot"><span>Ch 9, 10</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">☢️</span><div><div class="syl-name">Modern Physics</div><div class="syl-ch">Ch 11, 12, 13</div></div></div><div class="syl-topics"><div class="syl-t">Dual nature — photoelectric effect; de Broglie wavelength</div><div class="syl-t">Atoms — Bohr model; hydrogen spectrum; energy levels</div><div class="syl-t">Nuclei — binding energy; radioactive decay; nuclear reactions</div></div><div class="syl-foot"><span>Ch 11–13</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12cbse-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚗️</span><div><div class="syl-name">Solutions &amp; Electrochemistry</div><div class="syl-ch">Ch 2, 3</div></div></div><div class="syl-topics"><div class="syl-t">Types of solutions; solubility; Raoult's law; colligative properties</div><div class="syl-t">van't Hoff factor; osmotic pressure</div><div class="syl-t">Electrochemical cells; EMF; Nernst equation</div><div class="syl-t">Electrolysis; Faraday's laws; corrosion</div></div><div class="syl-foot"><span>Ch 2, 3</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚡</span><div><div class="syl-name">Chemical Kinetics &amp; Surface Chemistry</div><div class="syl-ch">Ch 4, 5</div></div></div><div class="syl-topics"><div class="syl-t">Rate of reaction; order; molecularity; integrated rate equations</div><div class="syl-t">Arrhenius equation; activation energy; collision theory</div><div class="syl-t">Adsorption; catalysis; colloids; emulsions</div></div><div class="syl-foot"><span>Ch 4, 5</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🔩</span><div><div class="syl-name">Inorganic Chemistry</div><div class="syl-ch">Ch 6–8</div></div></div><div class="syl-topics"><div class="syl-t">p-block elements — Groups 15 to 18</div><div class="syl-t">d and f block elements; properties and uses</div><div class="syl-t">Coordination compounds — IUPAC, isomerism, bonding, stability</div></div><div class="syl-foot"><span>Ch 6–8</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Organic Chemistry</div><div class="syl-ch">Ch 10–14</div></div></div><div class="syl-topics"><div class="syl-t">Alcohols, phenols, ethers — preparation and properties</div><div class="syl-t">Aldehydes, ketones, carboxylic acids — reactions</div><div class="syl-t">Amines — classification, preparation, properties</div><div class="syl-t">Biomolecules — carbohydrates, proteins, DNA/RNA; polymers</div></div><div class="syl-foot"><span>Ch 10–14</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12cbse-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Reproduction</div><div class="syl-ch">Ch 2, 3</div></div></div><div class="syl-topics"><div class="syl-t">Asexual reproduction in plants and animals</div><div class="syl-t">Flower structure; pollination; fertilisation; embryo development</div><div class="syl-t">Human reproductive system — male and female anatomy</div><div class="syl-t">Reproductive health; contraception; STDs</div></div><div class="syl-foot"><span>Ch 2, 3</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Genetics &amp; Molecular Biology</div><div class="syl-ch">Ch 5–7</div></div></div><div class="syl-topics"><div class="syl-t">Inheritance — Mendel's laws, multiple alleles, polygenic inheritance</div><div class="syl-t">Chromosomal theory; sex determination; linkage and recombination</div><div class="syl-t">DNA structure and replication; transcription and translation</div><div class="syl-t">Gene regulation; human genome project; DNA fingerprinting</div></div><div class="syl-foot"><span>Ch 5–7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🧬</span><div><div class="syl-name">Evolution &amp; Human Health</div><div class="syl-ch">Ch 7, 8</div></div></div><div class="syl-topics"><div class="syl-t">Origin of life; theories of evolution</div><div class="syl-t">Natural selection; Hardy-Weinberg principle; speciation</div><div class="syl-t">Human health — immunity, vaccines, AIDS, cancer, drugs</div></div><div class="syl-foot"><span>Ch 7, 8</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌍</span><div><div class="syl-name">Biotechnology &amp; Ecology</div><div class="syl-ch">Ch 11–16</div></div></div><div class="syl-topics"><div class="syl-t">Recombinant DNA technology; cloning; transgenic organisms</div><div class="syl-t">Applications — insulin, vaccines, Bt crops, gene therapy</div><div class="syl-t">Ecosystems — energy flow, nutrient cycles, succession</div><div class="syl-t">Biodiversity; conservation; environmental issues</div></div><div class="syl-foot"><span>Ch 11–16</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- ISC 12 -->
+      <div class="board-pane" id="c12-icse">
+        <div style="margin-bottom:12px;padding:12px 14px;background:var(--navy-lt);border-radius:var(--radius);font-size:13px;color:var(--navy)">ISC Class 12 is broadly similar to CBSE Class 12 in scope. Key differences: ISC Mathematics covers Linear Programming in more depth, and ISC Chemistry gives heavier weight to organic chemistry and analytical methods. Physics and Biology are virtually identical in scope. Jaagrut™ covers the full ISC Year 2 curriculum for all four subjects.</div>
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Maths — ISC Differences (Class 12)</div><div class="syl-ch">Notable additions</div></div></div><div class="syl-topics"><div class="syl-t">Linear programming — graphical and simplex (deeper than CBSE)</div><div class="syl-t">Regression lines and correlation (added in ISC)</div><div class="syl-t">Boolean algebra — logic gates</div></div><div class="syl-foot"><span>ISC additions</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧪</span><div><div class="syl-name">Chemistry — ISC Differences (Class 12)</div><div class="syl-ch">Notable additions</div></div></div><div class="syl-topics"><div class="syl-t">Qualitative inorganic analysis (salt analysis) — tested separately</div><div class="syl-t">Practical — 30 marks internal; titration and salt analysis</div><div class="syl-t">Environmental chemistry — added chapter in ISC</div></div><div class="syl-foot"><span>ISC additions</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Physics — ISC (Class 12)</div><div class="syl-ch">Syllabus note</div></div></div><div class="syl-topics"><div class="syl-t">Covers the same content as CBSE Class 12 Physics</div><div class="syl-t">ISC gives a heavier practical component — 15 marks</div><div class="syl-t">Questions tend to be more numerical and applied in ISC papers</div></div><div class="syl-foot"><span>ISC note</span><span style="color:var(--orange);font-weight:700">3 points</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Biology — ISC (Class 12)</div><div class="syl-ch">Syllabus note</div></div></div><div class="syl-topics"><div class="syl-t">Covers the same content as CBSE Class 12 Biology</div><div class="syl-t">ISC Biology has a compulsory practical — diagrams, slides, experiments</div><div class="syl-t">Applied biology and genetics tend to carry more weight</div></div><div class="syl-foot"><span>ISC note</span><span style="color:var(--orange);font-weight:700">3 points</span></div></div>
+        </div>
+      </div>
+      <!-- PUC 12 -->
+      <div class="board-pane" id="c12-puc">
+        <div style="margin-bottom:12px;padding:12px 14px;background:var(--orange-lt);border-radius:var(--radius);font-size:13px;color:var(--text);border-left:4px solid var(--orange)">PUC II (Second Year Pre-University) is the Karnataka board equivalent of Class 12. It carries 100-mark theory papers per subject. The syllabus is prescribed by the Karnataka PUE Board and closely mirrors NCERT, with some state-specific variations.</div>
+        <div class="syl-tabs" id="c12puc-stabs">
+          <button class="syl-tab active" onclick="switchSubj('c12puc','ma',this)">📐 Maths</button>
+          <button class="syl-tab" onclick="switchSubj('c12puc','ph',this)">⚡ Physics</button>
+          <button class="syl-tab" onclick="switchSubj('c12puc','ch',this)">🧪 Chemistry</button>
+          <button class="syl-tab" onclick="switchSubj('c12puc','bi',this)">🌿 Biology</button>
+        </div>
+        <div class="subj-pane active" id="c12puc-ma">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Relations, Functions &amp; Matrices</div><div class="syl-ch">Units 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Types of relations and functions; invertible functions</div><div class="syl-t">Inverse trigonometric functions</div><div class="syl-t">Matrices — operations, types; determinants — properties, applications</div></div><div class="syl-foot"><span>Units 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">∫</span><div><div class="syl-name">Calculus</div><div class="syl-ch">Unit 3</div></div></div><div class="syl-topics"><div class="syl-t">Continuity and differentiability; implicit differentiation</div><div class="syl-t">Applications — increasing/decreasing, tangents, maxima-minima</div><div class="syl-t">Integration — methods; definite integrals; area under curves</div><div class="syl-t">Differential equations — order, degree, variable separable</div></div><div class="syl-foot"><span>Unit 3</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Vectors &amp; 3D Geometry</div><div class="syl-ch">Unit 4</div></div></div><div class="syl-topics"><div class="syl-t">Vectors — types, dot and cross product; scalar triple product</div><div class="syl-t">Direction cosines and ratios; equations of line and plane</div><div class="syl-t">Distance between skew lines; angle between planes</div></div><div class="syl-foot"><span>Unit 4</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📊</span><div><div class="syl-name">Linear Programming &amp; Probability</div><div class="syl-ch">Units 5, 6</div></div></div><div class="syl-topics"><div class="syl-t">LPP — graphical method; feasible region; optimal solution</div><div class="syl-t">Bayes' theorem; conditional probability</div><div class="syl-t">Random variables; probability distributions; Bernoulli trials</div></div><div class="syl-foot"><span>Units 5, 6</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12puc-ph">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electrostatics &amp; Current Electricity</div><div class="syl-ch">Ch 1, 2</div></div></div><div class="syl-topics"><div class="syl-t">Coulomb's law; Gauss's theorem and applications</div><div class="syl-t">Electric potential; equipotential surfaces; capacitors</div><div class="syl-t">Ohm's law; drift velocity; Kirchhoff's rules; meter bridge</div></div><div class="syl-foot"><span>Ch 1, 2</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🧲</span><div><div class="syl-name">Magnetism, EMI &amp; AC</div><div class="syl-ch">Ch 4–7</div></div></div><div class="syl-topics"><div class="syl-t">Moving charges; cyclotron; force between conductors</div><div class="syl-t">Bar magnet; magnetisation; earth's magnetism</div><div class="syl-t">Faraday's law; motional EMF; eddy currents; transformers</div><div class="syl-t">AC circuits — LCR series; resonance; power in AC</div></div><div class="syl-foot"><span>Ch 4–7</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💡</span><div><div class="syl-name">Optics</div><div class="syl-ch">Ch 9, 10</div></div></div><div class="syl-topics"><div class="syl-t">Ray optics — total internal reflection; prism; optical instruments</div><div class="syl-t">Wave optics — Huygens' principle; diffraction; polarisation</div><div class="syl-t">Young's experiment — interference; fringe width</div></div><div class="syl-foot"><span>Ch 9, 10</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">☢️</span><div><div class="syl-name">Dual Nature, Atoms &amp; Nuclei</div><div class="syl-ch">Ch 11–13</div></div></div><div class="syl-topics"><div class="syl-t">Photoelectric effect; de Broglie wavelength; Davisson-Germer</div><div class="syl-t">Bohr's model; hydrogen spectrum; energy levels</div><div class="syl-t">Binding energy; radioactive decay; Q-value of reactions</div></div><div class="syl-foot"><span>Ch 11–13</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12puc-ch">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚗️</span><div><div class="syl-name">Solutions, Electrochemistry &amp; Kinetics</div><div class="syl-ch">Ch 2–4</div></div></div><div class="syl-topics"><div class="syl-t">Colligative properties; van't Hoff factor</div><div class="syl-t">Nernst equation; electrolytic cells; Faraday's laws</div><div class="syl-t">Rate law; order; Arrhenius equation; collision theory</div></div><div class="syl-foot"><span>Ch 2–4</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🔩</span><div><div class="syl-name">Inorganic Chemistry</div><div class="syl-ch">Ch 6–8</div></div></div><div class="syl-topics"><div class="syl-t">p-block elements — Groups 15, 16, 17, 18</div><div class="syl-t">d and f-block elements — properties, oxides, halides</div><div class="syl-t">Coordination compounds — nomenclature, isomerism, crystal field theory</div></div><div class="syl-foot"><span>Ch 6–8</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Organic Chemistry</div><div class="syl-ch">Ch 10–12</div></div></div><div class="syl-topics"><div class="syl-t">Alcohols, phenols, ethers; aldehydes and ketones</div><div class="syl-t">Carboxylic acids and amines — preparation, reactions</div><div class="syl-t">Biomolecules and polymers; chemistry in everyday life</div></div><div class="syl-foot"><span>Ch 10–12</span><span style="color:var(--orange);font-weight:700">3 topics</span></div></div>
+          </div>
+        </div>
+        <div class="subj-pane" id="c12puc-bi">
+          <div class="syl-grid">
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Reproduction</div><div class="syl-ch">Units 1</div></div></div><div class="syl-topics"><div class="syl-t">Asexual reproduction; vegetative propagation</div><div class="syl-t">Sexual reproduction in flowering plants</div><div class="syl-t">Human reproduction — gametogenesis, fertilisation, development</div><div class="syl-t">Reproductive health; birth control; STDs</div></div><div class="syl-foot"><span>Unit 1</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Genetics &amp; Molecular Biology</div><div class="syl-ch">Unit 2</div></div></div><div class="syl-topics"><div class="syl-t">Mendel's laws; codominance; incomplete dominance</div><div class="syl-t">Sex determination; chromosomal disorders</div><div class="syl-t">DNA replication; transcription; translation; regulation</div><div class="syl-t">Human genome project; DNA fingerprinting</div></div><div class="syl-foot"><span>Unit 2</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+            <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌍</span><div><div class="syl-name">Ecology &amp; Biotechnology</div><div class="syl-ch">Units 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Ecosystems — structure, function, succession, energy flow</div><div class="syl-t">Biodiversity and conservation strategies</div><div class="syl-t">Recombinant DNA technology; cloning; PCR</div><div class="syl-t">Applications — insulin, Bt crops, gene therapy, vaccines</div></div><div class="syl-foot"><span>Units 3, 4</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── JEE ── -->
+    <div class="syl-pane" id="sc-jee">
+      <div style="margin-bottom:18px"><div style="font-size:17px;font-weight:800;color:var(--navy)">JEE Mains Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Physics · Chemistry · Mathematics · Based on NTA-prescribed JEE Mains syllabus</div></div>
+      <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT (primary) · H.C. Verma — Concepts of Physics · Jaagrut™ Problem Sets · Previous year JEE Mains papers</div>
+      <div class="syl-tabs" id="jee-stabs">
+        <button class="syl-tab active" onclick="switchSubj('jee','ma',this)">📐 Maths</button>
+        <button class="syl-tab" onclick="switchSubj('jee','ph',this)">⚡ Physics</button>
+        <button class="syl-tab" onclick="switchSubj('jee','ch',this)">🧪 Chemistry</button>
+      </div>
+      <div class="subj-pane active" id="jee-ma">
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">🔢</span><div><div class="syl-name">Algebra</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Complex numbers — modulus, argument, polar form, De Moivre's theorem</div><div class="syl-t">Quadratic equations; nature of roots; common roots</div><div class="syl-t">Permutations and combinations; binomial theorem — middle term, properties</div><div class="syl-t">Sequences and series — AP, GP, HP; AM-GM-HM inequalities</div><div class="syl-t">Matrices and determinants — Cayley-Hamilton theorem (brief)</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📏</span><div><div class="syl-name">Coordinate Geometry &amp; Trigonometry</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Straight lines — all forms; angle bisectors; family of lines</div><div class="syl-t">Circles — standard forms; tangent; chord of contact; radical axis</div><div class="syl-t">Conics — parabola, ellipse, hyperbola; tangents, normals, chord</div><div class="syl-t">Trigonometry — compound angles; properties of triangles; inverse functions</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">∫</span><div><div class="syl-name">Calculus</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Limits — L'Hôpital's rule; sandwich theorem; standard limits</div><div class="syl-t">Differentiation — all rules; nth derivative; Rolle's and LMVT</div><div class="syl-t">Applications — monotonicity, tangents, maxima-minima, rate of change</div><div class="syl-t">Integration — all techniques; definite integrals; properties; area</div><div class="syl-t">Differential equations — linear first-order; variable separable</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ma"><span class="syl-ico">📐</span><div><div class="syl-name">Vectors, 3D Geometry &amp; Statistics</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Vectors — types; dot and cross product; vector triple product</div><div class="syl-t">3D geometry — equations of line and plane; skew lines; angle between</div><div class="syl-t">Statistics — mean deviation, variance, SD</div><div class="syl-t">Probability — classical, conditional; Bayes' theorem; Bernoulli</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+        </div>
+      </div>
+      <div class="subj-pane" id="jee-ph">
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🚀</span><div><div class="syl-name">Mechanics</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Kinematics — 1D, 2D; relative motion; projectile</div><div class="syl-t">Newton's laws; friction; circular motion dynamics</div><div class="syl-t">Work-energy theorem; power; elastic and inelastic collisions</div><div class="syl-t">Rotation — moment of inertia; rolling; angular momentum</div><div class="syl-t">Gravitation — Kepler's laws; orbital velocity; escape velocity</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electricity &amp; Magnetism</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Electrostatics — Coulomb; Gauss; potential; capacitors</div><div class="syl-t">Current electricity — Kirchhoff; meter bridge; potentiometer</div><div class="syl-t">Magnetic field — Biot-Savart; Ampere; force on charges</div><div class="syl-t">EMI — Faraday; Lenz; self and mutual inductance</div><div class="syl-t">AC circuits — phasors; LCR; resonance; transformers</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💡</span><div><div class="syl-name">Optics &amp; Modern Physics</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Ray optics — mirrors, lenses, prism, optical instruments</div><div class="syl-t">Wave optics — Huygens; interference; Young's; diffraction; polarisation</div><div class="syl-t">Photoelectric effect; de Broglie; Davisson-Germer</div><div class="syl-t">Bohr model; H-spectrum; X-rays</div><div class="syl-t">Nuclear physics — binding energy; radioactivity; Q-value</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌡️</span><div><div class="syl-name">Thermal &amp; Wave Physics</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">KTG — pressure, temperature, degrees of freedom</div><div class="syl-t">Thermodynamics — laws; Carnot; entropy (brief)</div><div class="syl-t">Waves — SHM; damped; resonance; Doppler effect</div><div class="syl-t">Fluids — Bernoulli; viscosity; surface tension; Stokes' law</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+        </div>
+      </div>
+      <div class="subj-pane" id="jee-ch">
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Physical Chemistry</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Mole concept; stoichiometry; redox; limiting reagent</div><div class="syl-t">Atomic structure — quantum numbers; orbital shapes; Aufbau</div><div class="syl-t">Chemical bonding — VSEPR; hybridisation; MOT (basic)</div><div class="syl-t">States of matter — gas laws; van der Waals; KTG</div><div class="syl-t">Thermodynamics — Hess's law; Gibbs energy; spontaneity</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🌡️</span><div><div class="syl-name">Physical Chemistry — Part 2</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Equilibrium — Kc, Kp, Le Chatelier; ionic equilibrium; pH</div><div class="syl-t">Solutions — colligative properties; van't Hoff factor</div><div class="syl-t">Electrochemistry — Nernst equation; electrolysis; Faraday</div><div class="syl-t">Chemical kinetics — rate law; order; Arrhenius equation</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">📋</span><div><div class="syl-name">Inorganic Chemistry</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">Periodic table — trends; ionisation energy; electron affinity</div><div class="syl-t">s-block — alkali and alkaline earth metals</div><div class="syl-t">p-block — Groups 13–18; important compounds and reactions</div><div class="syl-t">d and f-block — transition elements; coordination compounds</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Organic Chemistry</div><div class="syl-ch">Core area</div></div></div><div class="syl-topics"><div class="syl-t">IUPAC; isomerism — structural, geometric, optical</div><div class="syl-t">Reaction mechanisms — SN1, SN2, E1, E2; addition; elimination</div><div class="syl-t">Hydrocarbons — alkanes, alkenes, alkynes, arenes</div><div class="syl-t">Functional groups — alcohols, aldehydes, ketones, acids, amines</div><div class="syl-t">Biomolecules; polymers — for conceptual clarity</div></div><div class="syl-foot"><span>JEE scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── NEET ── -->
+    <div class="syl-pane" id="sc-neet">
+      <div style="margin-bottom:18px"><div style="font-size:17px;font-weight:800;color:var(--navy)">NEET Syllabus</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Biology · Physics · Chemistry · Based on NMC-prescribed NEET-UG syllabus</div></div>
+      <div style="margin-bottom:14px;font-size:13px;color:var(--muted)"><strong style="color:var(--navy)">Primary textbooks:</strong> NCERT Biology, Physics, Chemistry (Class 11 &amp; 12 CBSE/ ICSE/ PUC) — all subjects · Jaagrut™ Problem Sets · Previous year NEET papers</div>
+      <div class="syl-tabs" id="neet-stabs">
+        <button class="syl-tab active" onclick="switchSubj('neet','bi',this)">🌿 Biology</button>
+        <button class="syl-tab" onclick="switchSubj('neet','ph',this)">⚡ Physics</button>
+        <button class="syl-tab" onclick="switchSubj('neet','ch',this)">🧪 Chemistry</button>
+      </div>
+      <div class="subj-pane active" id="neet-bi">
+        <div style="margin-bottom:10px;padding:10px 13px;background:var(--green-lt);border-radius:8px;font-size:12.5px;color:var(--green)"><strong>90 questions in NEET come from Biology</strong> — making it the highest-weightage subject. NCERT is the only textbook you need. Jaagrut™ covers every line.</div>
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Diversity of Living Organisms (Class 11)</div><div class="syl-ch">Unit 1</div></div></div><div class="syl-topics"><div class="syl-t">Five-kingdom classification; binomial nomenclature</div><div class="syl-t">Kingdom Monera, Protista, Fungi — characteristics and examples</div><div class="syl-t">Plant kingdom — algae, bryophytes, pteridophytes, gymnosperms, angiosperms</div><div class="syl-t">Animal kingdom — basis of classification; non-chordates and chordates</div></div><div class="syl-foot"><span>Unit 1 · Cl 11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Cell Structure &amp; Function (Class 11)</div><div class="syl-ch">Unit 3</div></div></div><div class="syl-topics"><div class="syl-t">Cell theory; prokaryotic vs eukaryotic</div><div class="syl-t">All organelles — structure, function, ultrastructure</div><div class="syl-t">Biomolecules — carbohydrates, proteins, lipids, nucleic acids; enzyme kinetics</div><div class="syl-t">Cell cycle; mitosis and meiosis in detail</div></div><div class="syl-foot"><span>Unit 3 · Cl 11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌿</span><div><div class="syl-name">Plant Physiology (Class 11)</div><div class="syl-ch">Unit 5</div></div></div><div class="syl-topics"><div class="syl-t">Transport — water potential, osmosis, plasmolysis, transpiration</div><div class="syl-t">Mineral nutrition — essential elements; deficiency symptoms</div><div class="syl-t">Photosynthesis — light reaction (Z-scheme), Calvin cycle, C4, CAM</div><div class="syl-t">Respiration — glycolysis, Krebs cycle, ETC; respiratory quotient</div></div><div class="syl-foot"><span>Unit 5 · Cl 11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">👁️</span><div><div class="syl-name">Human Physiology (Class 11)</div><div class="syl-ch">Unit 6</div></div></div><div class="syl-topics"><div class="syl-t">Digestion — all accessory glands; absorption mechanisms</div><div class="syl-t">Breathing — lung volumes; regulation; gas exchange</div><div class="syl-t">Body fluids — blood groups; coagulation; cardiac cycle; ECG</div><div class="syl-t">Excretion — nephron detail; urine formation; osmoregulation</div></div><div class="syl-foot"><span>Unit 6 · Cl 11</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌱</span><div><div class="syl-name">Reproduction (Class 12)</div><div class="syl-ch">Unit 1</div></div></div><div class="syl-topics"><div class="syl-t">Modes of reproduction in plants; double fertilisation</div><div class="syl-t">Gametogenesis; menstrual cycle; fertilisation and implantation</div><div class="syl-t">Embryonic development; parturition; lactation</div><div class="syl-t">Reproductive health; contraception methods; infertility</div></div><div class="syl-foot"><span>Unit 1 · Cl 12</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🔬</span><div><div class="syl-name">Genetics &amp; Molecular Biology (Class 12)</div><div class="syl-ch">Unit 2</div></div></div><div class="syl-topics"><div class="syl-t">Mendel's laws; exceptions — incomplete dominance, codominance, epistasis</div><div class="syl-t">Linkage; sex-linked inheritance; chromosomal disorders</div><div class="syl-t">DNA structure; semi-conservative replication (Meselson-Stahl)</div><div class="syl-t">Transcription; translation; genetic code; lac operon</div></div><div class="syl-foot"><span>Unit 2 · Cl 12</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+          <div class="syl-card"><div class="syl-head bi"><span class="syl-ico">🌍</span><div><div class="syl-name">Ecology &amp; Biotechnology (Class 12)</div><div class="syl-ch">Units 3, 4</div></div></div><div class="syl-topics"><div class="syl-t">Ecosystems — productivity, decomposition, energy flow, nutrient cycling</div><div class="syl-t">Biodiversity — types; loss; conservation strategies; hotspots</div><div class="syl-t">Recombinant DNA — restriction enzymes; vectors; transformation</div><div class="syl-t">Applications — GM crops; golden rice; bioreactors; gene therapy</div></div><div class="syl-foot"><span>Units 3, 4 · Cl 12</span><span style="color:var(--orange);font-weight:700">4 topics</span></div></div>
+        </div>
+      </div>
+      <div class="subj-pane" id="neet-ph">
+        <div style="margin-bottom:10px;padding:10px 13px;background:var(--navy-lt);border-radius:8px;font-size:12.5px;color:var(--navy)"><strong>45 Physics questions in NEET.</strong> The entire NEET Physics syllabus mirrors CBSE Class 11 and 12 Physics. NCERT + concept clarity is the strategy.</div>
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🚀</span><div><div class="syl-name">Mechanics (Class 11 topics)</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Kinematics — 1D and 2D; projectile; relative motion</div><div class="syl-t">Laws of motion; friction; circular motion</div><div class="syl-t">Work, energy, power; elastic and inelastic collisions</div><div class="syl-t">Rotational motion; moment of inertia; rolling</div><div class="syl-t">Gravitation — Kepler's laws; satellites; binding energy</div></div><div class="syl-foot"><span>Cl 11 scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">🌡️</span><div><div class="syl-name">Thermal Physics &amp; Waves (Class 11)</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Thermodynamics — laws; Carnot cycle; heat engines</div><div class="syl-t">KTG — pressure, temperature, mean free path</div><div class="syl-t">SHM — displacement, velocity, acceleration, energy</div><div class="syl-t">Waves — transverse and longitudinal; Doppler effect; beats</div></div><div class="syl-foot"><span>Cl 11 scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">⚡</span><div><div class="syl-name">Electricity &amp; Magnetism (Class 12)</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Electrostatics — Coulomb; field; potential; capacitors</div><div class="syl-t">Current electricity — drift velocity; Kirchhoff; Wheatstone</div><div class="syl-t">Magnetism — Biot-Savart; Ampere; force on conductor</div><div class="syl-t">EMI — Faraday; Lenz; AC circuits</div></div><div class="syl-foot"><span>Cl 12 scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ph"><span class="syl-ico">💡</span><div><div class="syl-name">Optics &amp; Modern Physics (Class 12)</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Ray optics — mirrors, lenses, total internal reflection, prism</div><div class="syl-t">Wave optics — interference, diffraction, polarisation</div><div class="syl-t">Dual nature — photoelectric effect; de Broglie wavelength</div><div class="syl-t">Atoms — Bohr model; nuclei — radioactivity; binding energy</div></div><div class="syl-foot"><span>Cl 12 scope</span><span style="color:var(--orange);font-weight:700">4 areas</span></div></div>
+        </div>
+      </div>
+      <div class="subj-pane" id="neet-ch">
+        <div style="margin-bottom:10px;padding:10px 13px;background:var(--navy-lt);border-radius:8px;font-size:12.5px;color:var(--navy)"><strong>45 Chemistry questions in NEET.</strong> NCERT Chemistry for Class 11 and 12 is sufficient for NEET Chemistry. Jaagrut™ covers every chapter with application-focused teaching.</div>
+        <div class="syl-grid">
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">⚛️</span><div><div class="syl-name">Physical Chemistry</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Mole concept; stoichiometry; redox</div><div class="syl-t">Thermodynamics — Hess's law; Gibbs energy; spontaneity</div><div class="syl-t">Equilibrium — Kc, Kp; ionic equilibrium; buffer; pH</div><div class="syl-t">Solutions — colligative properties; osmosis; van't Hoff</div><div class="syl-t">Electrochemistry; chemical kinetics — Arrhenius equation</div></div><div class="syl-foot"><span>NEET scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">📋</span><div><div class="syl-name">Inorganic Chemistry</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">Periodic table — trends in all properties</div><div class="syl-t">Chemical bonding — VSEPR; hybridisation; hydrogen bonding</div><div class="syl-t">s-block — compounds and reactions of Na, K, Ca</div><div class="syl-t">p-block — key elements and reactions (Groups 13–18)</div><div class="syl-t">d and f-block — catalytic properties; coordination compounds</div></div><div class="syl-foot"><span>NEET scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+          <div class="syl-card"><div class="syl-head ch"><span class="syl-ico">🧬</span><div><div class="syl-name">Organic Chemistry</div><div class="syl-ch">NEET scope</div></div></div><div class="syl-topics"><div class="syl-t">IUPAC nomenclature; isomerism; inductive and resonance effects</div><div class="syl-t">Hydrocarbons — reactions of alkanes, alkenes, alkynes, arenes</div><div class="syl-t">Functional groups — alcohols, phenols, carbonyl compounds, amines</div><div class="syl-t">Biomolecules — sugars, amino acids, nucleotides (tested in NEET Biology too)</div><div class="syl-t">Polymers and chemistry in everyday life</div></div><div class="syl-foot"><span>NEET scope</span><span style="color:var(--orange);font-weight:700">5 areas</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;padding:12px 17px;background:var(--orange-lt);border-radius:var(--radius);font-size:13px;color:var(--text);border-left:4px solid var(--orange)"><strong>Note:</strong> Faculty may adjust, supplement or sequence topics differently based on what best serves each batch and board. The syllabus listed here reflects the standard scope for each class and board.</div>
+  </section>
+
+  <div class="cta-band"><div class="cta-inner">
+    <h2>Not sure which class or board to choose?</h2>
+    <p>Book a ₹250 Maths diagnostic. Our faculty will go over the syllabus with you and confirm the right starting point for your child.</p>
+    <div class="cta-btns">
+      <button class="btn btn-primary btn-xl" onclick="openAssess()">📋 Book Assessment</button>
+      <button class="btn btn-white btn-lg" onclick="goTo('contact')">📩 Contact Us</button>
+    </div>
+  </div></div>
+</div><!-- /pg-syllabus -->
+<!-- FOOTER (shared) -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:11px">
+        <img src="./Group 4.png" alt="" width="120px;">
+      </div>
+      <p class="footer-desc">We Shape The Future, We Teach.<br>Live online tutoring for Class 9–12, JEE and NEET. Bengaluru. 17+ years of teaching experience.</p>
+      <div class="footer-contact">📍 28 RBI Colony, Anandnagar, Bengaluru 560024<br>📞 <a href="tel:+919620000535">+91 96200 00535</a><br>✉️ <a href="mailto:admin@jaagrut.in">admin@jaagrut.in</a></div>
+    </div>
+    <div>
+      <div class="f-head">Classes</div>
+      <ul class="f-links">
+        <li><span onclick="goTo('class9')">Class 9 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('class10')">Class 10 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('class11')">Class 11 &amp; 12 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('jee')">JEE Mains</span></li>
+        <li><span onclick="goTo('neet')">NEET</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Quick Links</div>
+      <ul class="f-links">
+        <li><span onclick="goTo('about')">About Us</span></li>
+        <li><span onclick="goTo('syllabus')">Syllabus</span></li>
+        <li><span onclick="goTo('fees')">Fees</span></li>
+        <li><span onclick="goTo('faqs')">FAQs</span></li>
+        <li><span onclick="goTo('contact')">Contact</span></li>
+        <li><a href="#" onclick="openAssess()">Book Assessment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Connect</div>
+      <ul class="f-links">
+        <li><a href="https://wa.me/919620000535" target="_blank">WhatsApp Us</a></li>
+        <li><a href="tel:+919620000535">Call Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <span style="color:rgba(255,255,255,.3)">© 2026 Jaagrut™ Educational Services. All Rights Reserved. "Jaagrut™" is a registered trademark.</span>
+    <span style="color:rgba(255,255,255,.3)">CIN: U80300KA2007PTC044001 | GSTIN: ABCD1234567890DD</span>
+    <div style="display:flex;gap:14px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="wa-widget">
+  <div class="wa-panel" id="waPanel">
+    <div class="wa-head">
+      <div class="wa-av">🎓</div>
+      <div><div class="wa-name">Jaagrut™ Support</div><div class="wa-status"><span class="wa-online"></span> Typically replies in minutes</div></div>
+      <button class="wa-x" onclick="toggleWa()">✕</button>
+    </div>
+    <div class="wa-body"><div class="wa-msg"><strong>Jaagrut™ Team</strong>👋 Hi! How can we help you today?</div></div>
+    <div class="wa-actions">
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+want+to+book+the+assessment." target="_blank">📋 Book Assessment (₹250)</a>
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+want+to+know+the+fee+structure." target="_blank"><img src="./whatsapp.svg" style="width: 20px;" alt=""> Enquire Now</a>
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+have+a+question+about+Jaagrut." target="_blank">💬 General Enquiry</a>
+    </div>
+  </div>
+  <div style="position:relative">
+    <button class="wa-btn" onclick="toggleWa()">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.471 2.027 7.773L0 32l8.469-2.219A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.771-1.854l-.486-.289-5.028 1.317 1.341-4.894-.317-.502A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.907c-.397-.199-2.351-1.16-2.717-1.292-.365-.132-.631-.199-.897.199-.266.398-.797 1.026-.976 1.225-.179.199-.358.199-.664.066a8.565 8.565 0 01-2.513-1.554 9.441 9.441 0 01-1.74-2.168c-.179-.398-.019-.598.137-.798.14-.178.332-.465.498-.664.166-.199.199-.332.298-.531.099-.2.05-.398-.025-.597-.075-.2-.897-2.162-1.229-2.96-.323-.778-.65-.672-.897-.685-.233-.012-.498-.015-.764-.015-.266 0-.697.1-.1.498-.365.398-1.395 1.36-1.395 3.316s1.428 3.847 1.627 4.112c.2.265 2.81 4.292 6.809 6.018.952.41 1.694.656 2.273.84.955.304 1.824.261 2.512.158.767-.114 2.351-.961 2.684-1.89.333-.929.333-1.726.233-1.892-.1-.165-.366-.265-.764-.464z"/></svg>
+    </button>
+    <span class="wa-notif" id="waN">1</span>
+  </div>
+</div>
+
+<!-- ASSESSMENT MODAL -->
+<div class="modal-overlay" id="assessModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div><div class="modal-title">📋 Book Maths Diagnostic Assessment</div><div class="modal-sub">Online · Adjusted on enrolment</div></div>
+      <button class="modal-x" onclick="closeAssess()">✕</button>
+    </div>
+    <div class="modal-body" id="assessBody">
+      <div class="form-notice"><strong>A genuine Maths diagnostic, not a sales call.</strong> Enrol → fee is fully adjusted. Don't enrol → live faculty session.</div>
+      <div class="form-row">
+        <div class="fg"><label>Student's Full Name *</label><input type="text" placeholder="e.g. Aryan Sharma" id="f_name"></div>
+        <div class="fg"><label>Current Grade *</label><select id="f_grade"><option value="">Select grade</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Parent Name *</label><input type="text" placeholder="e.g. Priya Sharma" id="f_parent"></div>
+        <div class="fg"><label>Mobile Number *</label><input type="tel" placeholder="+91 98XXXXXXXX" id="f_phone"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Preferred Date *</label><input type="date" id="f_date"></div>
+        <div class="fg"><label>Preferred Slot *</label><select id="f_slot"><option value="">Select slot</option><option>Morning · 9:00 AM – 11:00 AM</option><option>Afternoon · 12:00 PM – 2:00 PM</option><option>Evening · 5:00 PM – 7:00 PM</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Curriculum *</label><select id="f_board"><option value="">Select</option><option>CBSE</option><option>ICSE</option><option>PUC</option></select></div>
+        <div class="fg"><label>City *</label><input type="text" placeholder="e.g. Bengaluru" id="f_loc"><span class="hint">Classes are online. Helps with scheduling.</span></div>
+      </div>
+      <button class="form-submit" onclick="submitAssess()">Book My Assessment →</button>
+    </div>
+    <div class="form-success" id="assessOk">
+      <div class="fs-ico">✅</div>
+      <div class="fs-title">Assessment Booked!</div>
+      <div class="fs-desc">Our team will contact you within a few hours to confirm your slot and share the ₹250 payment link.<br><br><strong>Jaagrut™ · +91 96200 00535</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEE MODAL -->
+<div class="modal-overlay" id="feeModal">
+  <div class="modal-box" style="max-width:510px">
+    <div class="modal-head">
+      <div><div class="modal-title">💬 Fee Enquiry</div><div class="modal-sub">Exact fees, discounts &amp; instalment options shared personally</div></div>
+      <button class="modal-x" onclick="closeFee()">✕</button>
+    </div>
+    <div class="modal-body" id="feeBody">
+      <div class="form-row">
+        <div class="fg"><label>Your Name *</label><input type="text" placeholder="e.g. Priya Sharma" id="fm_name"></div>
+        <div class="fg"><label>Mobile Number *</label><input type="tel" placeholder="+91 98XXXXXXXX" id="fm_phone"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Child's Grade *</label><select id="fm_grade"><option value="">Select</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>JEE / NEET</option></select></div>
+        <div class="fg"><label>Subjects Interested In</label><select id="fm_subj"><option value="">Select</option><option>Maths only</option><option>Science only</option><option>Maths + Science</option><option>All 4 subjects</option><option>JEE / NEET</option><option>Not sure yet</option></select></div>
+      </div>
+      <div class="fg"><label>No. of Children Enrolling</label><select id="fm_kids"><option value="1">1 child</option><option value="2">2 children (sibling discount)</option><option value="3">3+</option></select><span class="hint">Sibling discount applies — mention it here.</span></div>
+      <button class="form-submit" onclick="submitFee()">Send Enquiry →</button>
+    </div>
+    <div class="form-success" id="feeOk">
+      <div class="fs-ico">📩</div>
+      <div class="fs-title">Enquiry Received!</div>
+      <div class="fs-desc">We'll call or WhatsApp you within a few hours with exact fees, sibling discounts and instalment options.<br><br><strong>Jaagrut™ · +91 96200 00535</strong></div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>

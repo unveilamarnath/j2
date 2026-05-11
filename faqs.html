@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaagrut™ – Live Online Classes | Bengaluru</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>📍 Bengaluru · Online across India &nbsp;|&nbsp; 📞 <a href="tel:+919620000535">+91 96200 00535</a> &nbsp;|&nbsp; ✉️ <a href="mailto:admin@jaagrut.in">admin@jaagrut.in</a></span>
+  <div class="topbar-r">
+    <!-- <span>New batch · 11 April 2026</span> -->
+    <span class="tb-pill">15 Seats Only</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="goTo('home')">
+    <img src="./Group 1.png" alt="" srcset="" width="140px">
+  </div>
+  <ul class="nav-menu">
+    <li><button class="nav-link" onclick="goTo('home')">Home</button></li>
+    <li><button class="nav-link" onclick="goTo('about')">About Us</button></li>
+    <li class="nav-item">
+      <button class="nav-link">Classes <span class="arr">▾</span></button>
+      <div class="dropdown">
+        <span class="dd-link" onclick="goTo('class9')">Class 9</span>
+        <span class="dd-link" onclick="goTo('class10')">Class 10<span class="tag">Featured</span></span>
+        <span class="dd-link" onclick="goTo('class11')">Class 11 &amp; 12</span>
+        <span class="dd-link" onclick="goTo('jee')">JEE Mains</span>
+        <span class="dd-link" onclick="goTo('neet')">NEET</span>
+      </div>
+    </li>
+    <li><button class="nav-link" onclick="goTo('syllabus')">Syllabus</button></li>
+    <li><button class="nav-link" onclick="goTo('fees')">Fees</button></li>
+    <li><button class="nav-link" onclick="goTo('faqs')">FAQs</button></li>
+    <li><button class="nav-link" onclick="goTo('contact')">Contact</button></li>
+  </ul>
+  <div class="nav-ctas">
+    <button class="btn btn-ghost" onclick="goTo('faqs')">FAQs</button>
+    <button class="btn btn-ghost" onclick="goTo('contact')">Enquire</button>
+    <button class="btn btn-primary" onclick="openAssess()">📋 Book Assessment</button>
+  </div>
+</nav>
+<!-- ════════════════════════════════
+     PAGE: FAQs
+     ════════════════════════════════ -->
+<div class="page active" id="pg-faqs">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span><span class="sep">›</span><span>FAQs</span></div>
+      <div class="page-hero-eyebrow">Everything you want to know before enrolling</div>
+      <h1>Questions parents<br>ask us most.</h1>
+      <p>We have put together every question we have been asked — about fees, online classes, subjects, the assessment, schedules and more. If something is still unclear, just call or WhatsApp us.</p>
+    </div>
+  </div>
+
+  <section>
+    <!-- Quick jump -->
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px">
+      <a href="#fq-general" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">General</a>
+      <a href="#fq-online" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">Online Classes</a>
+      <a href="#fq-assessment" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">Assessment</a>
+      <a href="#fq-fees" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">Fees &amp; Payment</a>
+      <a href="#fq-subjects" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">Subjects</a>
+      <a href="#fq-results" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">Results &amp; Progress</a>
+      <a href="#fq-parents" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">For Parents</a>
+      <a href="#fq-jee-neet" style="padding:7px 16px;border-radius:20px;border:2px solid var(--border);font-size:13px;font-weight:700;color:var(--muted);text-decoration:none;transition:all .18s" onmouseover="this.style.background='var(--navy)';this.style.color='#fff';this.style.borderColor='var(--navy)'" onmouseout="this.style.background='';this.style.color='var(--muted)';this.style.borderColor='var(--border)'">JEE &amp; NEET</a>
+    </div>
+
+    <!-- ── GENERAL ── -->
+    <div id="fq-general" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">📌</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">General Questions</div><div style="font-size:13px;color:var(--muted)">What Jaagrut™ is, who it is for, and how it works</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What is Jaagrut™ and who is it for?</span><div class="faq-tog">−</div></div><div class="faq-a">Jaagrut™ is a live online tutoring platform based in Bengaluru. We offer classes for students in Class 9, 10, 11 and 12 across CBSE, ICSE and PUC (Karnataka), and for competitive exam aspirants preparing for JEE Mains and NEET. All classes are live — not pre-recorded lectures. Batches are capped at 15 students, and faculty have 17+ years of teaching experience.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is Jaagrut™ suitable for students who are already doing well, or only for those who are struggling?</span><div class="faq-tog">+</div></div><div class="faq-a">Both. Students who are already performing well benefit from the depth and conceptual clarity we provide — which becomes especially valuable in competitive exams. Students who are struggling benefit from the small batch size, the patient teaching approach, and the willingness of faculty to go back to basics when needed. The ₹250 Maths diagnostic helps us understand exactly where each student stands and what they need.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Why does Jaagrut™ cap every batch at 15 students?</span><div class="faq-tog">+</div></div><div class="faq-a">In a group of 30 or 40 students, a child can stay silent and confused for weeks before anyone notices. In a batch of 15, that cannot happen. Faculty know every student's name and their current understanding. Progress is tracked individually, not collectively. We have kept this limit since we started — it is not a marketing point, it is the reason our students actually improve.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child has been going to a local coaching centre. How is this different?</span><div class="faq-tog">+</div></div><div class="faq-a">The most visible difference is batch size and what happens inside the class. Most local coaching centres operate with 30 to 60 students per batch, which means individual attention is not practically possible. At Jaagrut™, the batch is 15 students maximum, the teaching is concept-first rather than question-pattern-driven, and parents are kept in the loop through direct faculty communication and monthly progress reports.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child has already failed or dropped significant marks. Is it too late to join?</span><div class="faq-tog">+</div></div><div class="faq-a">It is rarely too late, and it depends less on marks and more on what is causing them. When a student has failed, it usually means they have specific foundational gaps — not that they are incapable of understanding the subject. Our diagnostic assessment tells us exactly where those gaps are. For some students, the main batch is the right fit straight away. For others, a foundation stage or 1-on-1 class is recommended first. We make that call honestly, not commercially.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Does Jaagrut™ offer classes only in Bengaluru or pan India?</span><div class="faq-tog">+</div></div><div class="faq-a">All Jaagrut™ classes are fully online, which means students from any city or state in India can enrol. The faculty are based in Bengaluru, and the teaching experience has been shaped by 17+ years in Bengaluru classrooms — but geography is no longer a constraint. Students from different cities attend the same batch as long as their board and class match.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is there a physical centre or is everything online?</span><div class="faq-tog">+</div></div><div class="faq-a">Everything is online. There is no physical classroom to travel to. Classes are conducted live over secure video platforms. Our registered address is 28 RBI Colony, Anandnagar, Bengaluru 560024 — but instruction is entirely online.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is in Class 8. Can we join now to get a head start for Class 9?</span><div class="faq-tog">+</div></div><div class="faq-a">We currently do not run a dedicated Class 8 batch. However, a parent in this situation can speak to our faculty to understand what Class 9 will demand and whether their child's current Maths foundation is solid. If gaps exist, we can discuss options. You can reach us by calling +91 96200 00535 or filling the contact form.</div></div>
+      </div>
+    </div>
+
+    <!-- ── ONLINE CLASSES ── -->
+    <div id="fq-online" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">📡</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">Online Classes — How They Work</div><div style="font-size:13px;color:var(--muted)">Live sessions, recordings, schedules, technology</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Are the classes live or pre-recorded?</span><div class="faq-tog">−</div></div><div class="faq-a">Our sessions are conducted live online. Limited offline options are also available — reach out to us to learn more.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What platform are the online classes conducted on?</span><div class="faq-tog">+</div></div><div class="faq-a">Classes are conducted on secure, well-established video conferencing platforms. The specific platform details are shared with enrolled families at the time of joining. All that is needed on the student's side is a laptop, tablet or desktop with a stable internet connection — a camera and microphone are helpful but not mandatory for attendance.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What are the class timings?</span><div class="faq-tog">+</div></div><div class="faq-a">Weekday classes run between 5:00 PM and 9:00 PM — two sessions of 1 hour 15 minutes each, scheduled after school hours. Weekend sessions wrap up before 3:00 PM. Your confirmed slot is shared after you complete the enrolment process. The structure is designed so that school, homework and Jaagrut™ classes do not conflict.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child missed a class. Will they fall behind?</span><div class="faq-tog">+</div></div><div class="faq-a">For group batches, recorded sessions are not provided by default; however, sessions can be recorded upon request. We recommend reaching out to our counsellor to explore the best option for your child.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How does doubt clearing work in an online class?</span><div class="faq-tog">+</div></div><div class="faq-a">Doubts are cleared during the live session itself. Students can speak up, type in the chat, or raise a virtual hand — faculty address questions in real time. For doubts that arise outside class hours, students can reach out to the faculty and get them addressed at the start of the next session. Faculty at Jaagrut™ are accessible beyond class time — that is a deliberate part of how we operate.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How much time outside of class does my child need to spend on studies?</span><div class="faq-tog">+</div></div><div class="faq-a">We recommend 30 to 45 minutes of self-study after each session — going through the worksheet, and attempting the practice problems. This is not a rigid requirement but a reasonable habit that compounds well over a semester.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is not very comfortable with technology. Will they manage?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. The platforms used are straightforward — students need to click a link and join the call. There is no complex software to install or learn. If a student or parent is unfamiliar with the process, our team walks you through it before the first session. With a batch of only 15 students, the faculty also notice quickly if a technical issue is disrupting a student's participation and can help troubleshoot.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What internet speed is needed for online classes?</span><div class="faq-tog">+</div></div><div class="faq-a">A stable internet connection of 5 Mbps or above is generally sufficient for video classes. We recommend using a fixed broadband connection rather than mobile data for live sessions, though students in areas with strong 4G or 5G coverage manage fine on mobile data as well.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is it safe for my child to attend an online class with students they don't know?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. Batches have a maximum of 15 students, and each batch is a closed group — no one outside the enrolled students and faculty can join. All participants are verified at enrolment. The small size means every child is known by name and monitored. There are no anonymous interactions. The environment is structured, supervised, and educationally focused throughout.</div></div>
+      </div>
+    </div>
+
+    <!-- ── ASSESSMENT ── -->
+    <div id="fq-assessment" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">🧪</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">The Diagnostic Assessment</div><div style="font-size:13px;color:var(--muted)">What it is, why it costs ₹250, and what you get from it</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Why is there a ₹250 fee for the assessment? Why isn't it free?</span><div class="faq-tog">−</div></div><div class="faq-a">We charge ₹250 because it is a genuine, structured evaluation — not a tour of the institute or a sales presentation. Faculty time is spent conducting and evaluating it, and the result is a personalised report specific to your child. A free demo class gives a family a surface-level experience of teaching; our diagnostic gives you actual data on where your child stands in Maths. If you enrol, the ₹250 is fully adjusted against your course fee — so there is no extra cost. If you choose not to enrol after the test, you will still receive your assessment results along with a short video call with one of our teachers to discuss your child's performance.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What exactly does the Maths diagnostic test?</span><div class="faq-tog">+</div></div><div class="faq-a">The diagnostic is a structured online Maths test that covers Class 9 CBSE/ ICSE/ PUC prerequisites — topics like algebra, geometry fundamentals, number systems and basic problem solving. It is specifically for Maths because Maths is cumulative: gaps from Class 7 or 8 show up clearly in Class 9 and 10 difficulty. The test is not a trick paper. It is designed to give us and you an honest picture of where your child's understanding actually stands, without pressure.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What does my child receive after the assessment?</span><div class="faq-tog">+</div></div><div class="faq-a">You receive details how your child performed across different topic areas — what they understood well, what had gaps, and what those gaps likely mean for Class 10 board preparation. You also get a live session with a faculty member who goes through the results and recommends a specific learning path — whether that is the main batch, the foundation stage, or 1-on-1 classes. This is not a templated summary; it is a specific, honest assessment of your child's current standing.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is the assessment only for Class 10 students?</span><div class="faq-tog">+</div></div><div class="faq-a">The diagnostic is most commonly used for Class 10 enrolment because that is the board year and the stakes are highest. However, students joining Class 9, Class 11 or competitive exam batches also go through the same process — faculty need to understand where a student stands before placing them. The specific content of the diagnostic may vary by class, but the purpose is the same: honest placement, not a sales call.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What if my child does poorly in the assessment? Will they be turned away?</span><div class="faq-tog">+</div></div><div class="faq-a">No. A poor result on the diagnostic does not mean your child cannot join. It means the faculty understand that a different approach is needed. A student with significant foundational gaps is recommended for a foundation stage or 1-on-1 sessions — not turned away. The assessment is used to place the student correctly, not to screen them out. In fact, a student with visible gaps who joins the right setting for them often makes more progress than one who joins a batch that moves too fast.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can I book an assessment without committing to enrolment?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes, absolutely. Booking the assessment carries no obligation to enrol. You complete the assessment, receive the faculty session, and then decide. If you enrol, the ₹250 is adjusted. If not, you walk away with a useful, personalised understanding of your child's Maths standing — which is worth the ₹250 on its own.</div></div>
+      </div>
+    </div>
+
+    <!-- ── FEES ── -->
+    <div id="fq-fees" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">₹</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">Fees &amp; Payment</div><div style="font-size:13px;color:var(--muted)">Course fees, instalments, sibling discount, what is included</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Why don't you list fees on the website?</span><div class="faq-tog">−</div></div><div class="faq-a">Because a number on a webpage does not account for your specific situation. The fee depends on which subjects you are enrolling for, how many children, whether a sibling discount applies, which learning pathway the diagnostic recommends, and whether monthly instalments are needed. A five-minute conversation covers all of that accurately. We do not think a listed fee serves parents well — it either overstates or understates what the actual cost will be for a specific family.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can I enrol for just one subject instead of all four?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. Jaagrut™ uses subject-based pricing. You can enrol your child for only Maths, only Science, or any combination. There is no requirement to take all four subjects. Many families start with the subject where their child needs the most help and add others over time.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is there a sibling discount?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. If you are enrolling two children from the same family, a sibling discount applies. Please mention this when you fill the fee enquiry form or call us — we factor it in before you finalise anything.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can fees be paid monthly instead of annually?</span><div class="faq-tog">+</div></div><div class="faq-a">The standard structure is an annual fee. Monthly instalment plans are available on a case-by-case basis. Raise this during the fee enquiry conversation — we try to accommodate it wherever we can. There is no penalty or extra charge for choosing an instalment plan.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Are there any registration fees or hidden charges?</span><div class="faq-tog">+</div></div><div class="faq-a">No. There is no registration fee, no annual admission charge, and no hidden fees of any kind. The only upfront cost is the ₹250 diagnostic assessment fee, which is adjusted in full against the course fee on enrolment. What is quoted during the fee conversation is what you pay — nothing additional comes up later.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is there a lock-in period? What if I want to stop midway?</span><div class="faq-tog">+</div></div><div class="faq-a">We do not believe in contractual lock-ins. Families continue because they see results, not because they are contractually obligated to stay. The refund and exit policy is discussed personally during the fee conversation — we are transparent about it. Our retention is driven by outcomes, not paperwork.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How do I get the exact fee for my child?</span><div class="faq-tog">+</div></div><div class="faq-a">Fill the fee enquiry form on the Fees page, or call us at +91 96200 00535, or WhatsApp us. We typically respond within a few hours. The conversation covers exact fees, any applicable discounts and payment options — in under five minutes.</div></div>
+      </div>
+    </div>
+
+    <!-- ── SUBJECTS ── -->
+    <div id="fq-subjects" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">📚</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">Subject-Related Questions</div><div style="font-size:13px;color:var(--muted)">Maths, Science, board-specific questions parents search for most</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child finds Maths very difficult. Can Jaagrut™ actually help?</span><div class="faq-tog">−</div></div><div class="faq-a">This is the most common reason families come to us. A student who "finds Maths difficult" has almost always missed one or two foundational concepts along the way — a specific type of equation, a geometric property, or a method they memorised without understanding. When we teach those concepts properly from scratch, the difficulty dissolves. We have seen this pattern across hundreds of students over 17+ years. The diagnostic assessment helps us identify exactly which concepts are missing so we can address them directly, rather than starting from the beginning of the entire syllabus.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What chapters of CBSE Class 10 Maths are covered?</span><div class="faq-tog">+</div></div><div class="faq-a">The full CBSE Class 10 Maths syllabus is covered — real numbers, polynomials, pair of linear equations, quadratic equations, arithmetic progressions, triangles, coordinate geometry, trigonometry, circles, areas related to circles, surface areas and volumes, statistics, and probability. We follow the NCERT textbook throughout, supplemented by previous year board papers and Jaagrut™ worksheets. Nothing is skipped and nothing extra is added without reason.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is Science (Physics, Chemistry, Biology) taught as one subject or separately?</span><div class="faq-tog">+</div></div><div class="faq-a">For Class 9 and 10 CBSE/ ICSE/ PUC, Science is a single paper in the board exam — but it covers Physics, Chemistry and Biology as three distinct sections. We teach them as separate disciplines within the Science class. Each subject gets its own focused sessions, its own worksheets and test questions. Parents can choose to enrol for all three or, if needed, prioritise just one or two sections depending on where their child needs the most help.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Do you cover Class 10 ICSE Maths? Is the syllabus different from CBSE?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes, we cover ICSE Class 10 Mathematics. The ICSE syllabus at Class 10 is broader than CBSE — it includes topics like commercial mathematics (GST, banking, shares), arithmetic and geometric progressions, and a more detailed treatment of coordinate geometry and mensuration. ICSE also places greater emphasis on the application of concepts in practical scenarios. We follow the Selina Concise Mathematics textbook for ICSE students.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is in PUC (Karnataka). Do you cover the PUC syllabus?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. We cover PUC I and PUC II for the Karnataka State Board (prescribed by the Department of Pre-University Education). The PUC syllabus is taught through the Karnataka PUE Board textbooks. While it is similar to CBSE in scope, there are differences in sequencing and depth for certain topics. Faculty are familiar with KCET exam requirements as well, and this is factored into how we prepare PUC students.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Does Jaagrut™ cover English, Social Science or other subjects?</span><div class="faq-tog">+</div></div><div class="faq-a">No. Jaagrut™ specifically deals in Mathematics and Science subjects — Physics, Chemistry and Biology. We do not offer classes in English, Social Science, History, Geography or any other subject. Our focus is deliberate. Going deep into a narrow range of subjects is what allows us to teach them well.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is weak in Chemistry specifically. Can they join for Chemistry only?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. You can enrol for a single subject. If Chemistry is the primary concern, we recommend starting with the diagnostic so faculty understand the specific gaps — whether it is conceptual understanding, balancing equations, organic chemistry reactions or something else. A targeted approach works far better than a general one when only one subject needs attention.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is Biology taught only for NEET aspirants or for Class 10 board students too?</span><div class="faq-tog">+</div></div><div class="faq-a">Biology is taught at every level. For Class 9 and 10 CBSE/ ICSE/ PUC/ICSE students, Biology forms part of the Science paper and is covered in full. For Class 11 and 12 students, Biology is a separate subject and is covered as part of the board curriculum. For NEET aspirants, Biology is covered in full depth across both Class 11 and Class 12 NCERT — as it accounts for 90 of the 180 NEET questions.</div></div>
+      </div>
+    </div>
+
+    <!-- ── RESULTS & PROGRESS ── -->
+    <div id="fq-results" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">📈</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">Results &amp; Progress</div><div style="font-size:13px;color:var(--muted)">How improvement is tracked and what results parents can expect</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How long does it take to see improvement?</span><div class="faq-tog">−</div></div><div class="faq-a">This varies by student, but most families notice a change in confidence and in-class participation within the first four to six weeks. Marks improvement depends on when the next school test falls and how significant the foundational gaps were. A student with one or two specific gaps typically shows faster improvement than one who has been struggling across multiple topics for years. The diagnostic assessment helps set realistic expectations from the start — faculty will tell you honestly what timeline is likely for your child specifically.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How will I know if my child is actually improving and not just attending classes?</span><div class="faq-tog">+</div></div><div class="faq-a">Through three channels. First, monthly progress reports — written summaries that show topic-by-topic performance across the assessments conducted during the month. Second, regular in-class assessments and worksheet scores, which give a week-by-week picture of how well concepts are being retained. Third, direct faculty communication — you can speak to your child's teacher at any time and ask directly how they are doing. We do not give parents vague, positive updates to keep them comfortable. If a student is not improving as expected, we say so and discuss what needs to change.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What have previous students scored in their CBSE board exams?</span><div class="faq-tog">+</div></div><div class="faq-a">Students who have gone through the full Jaagrut™ programme have scored 94% in CBSE Class 10 boards and gone on to secure engineering seats through CET at top Bengaluru colleges. Another student who joined before Class 10 went on to hold international scholarships from institutions in Germany. We do not publish aggregate statistics because batch sizes are small by design — but the individual outcomes have been significant.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Does Jaagrut™ guarantee a certain score or percentage?</span><div class="faq-tog">+</div></div><div class="faq-a">No. We do not make score guarantees. Any coaching centre that guarantees a specific percentage should be questioned, because the outcome depends on the student's effort, consistency and starting point as much as the teaching. What we do guarantee is honest teaching, genuine individual attention, regular feedback to parents, and a faculty that is invested in each student's progress. The results follow from that combination.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">What happens if my child is not making progress after a few months?</span><div class="faq-tog">+</div></div><div class="faq-a">We raise it. If a student is consistently not progressing after adequate time, faculty will bring it to the parent's attention directly and discuss what could be causing it — whether that is attendance, self-study habits, a need to change the learning path, or something happening at school. We do not let a student drift through sessions without progress. An honest conversation with the parent is always the first step.</div></div>
+      </div>
+    </div>
+
+    <!-- ── FOR PARENTS ── -->
+    <div id="fq-parents" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">👨‍👩‍👧</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">For Parents Specifically</div><div style="font-size:13px;color:var(--muted)">Communication, safety, scheduling around school, and peace of mind</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can I speak directly to the teacher, not just a counsellor or coordinator?</span><div class="faq-tog">−</div></div><div class="faq-a">Yes. Direct faculty communication is something we actively encourage. At Jaagrut™, you can speak to the teacher who is actually teaching your child — not a student counsellor who relays filtered information. Parents who have questions about their child's performance, understanding of a specific topic, or learning pace can reach the faculty directly. We find that this kind of open communication removes a lot of the anxiety parents carry about whether their child is genuinely on track.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How often do you update parents on their child's progress?</span><div class="faq-tog">+</div></div><div class="faq-a">Monthly written progress reports are standard. These cover the assessments conducted during the month, which topics were tested, how the child performed relative to the concepts taught, and what the focus for the next month will be. Beyond the monthly report, parents can reach out at any time for an update — there is no scheduled "parent communication window" that you have to wait for.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Will online classes affect my child's eyesight or screen time?</span><div class="faq-tog">+</div></div><div class="faq-a">This is a genuine concern many parents have, and it is worth addressing practically. The recommended approach is to ensure the screen is at least 50 cm away from the face, the room is well-lit, and the student takes a short break every 45 to 60 minutes — which aligns naturally with how our sessions are structured. Jaagrut™ classes are two sessions of 1 hour 15 minutes each on weekdays. This is comparable to the screen time students already spend on school online portals, homework and other digital activities. We do not believe the class structure causes meaningful additional strain if basic screen hygiene is maintained.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Will Jaagrut™ classes clash with my child's school schedule?</span><div class="faq-tog">+</div></div><div class="faq-a">No. Weekday classes are scheduled between 5:00 PM and 9:00 PM specifically to avoid school hours. Weekend sessions wrap up before 3:00 PM. School exams, PTMs and other school commitments take priority — and recordings ensure that sessions missed for school reasons can still be covered. Specific slot timing within the 5–9 PM window is confirmed after you enrol, so your child's particular school schedule is factored in.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is in Class 12 and boards are just a few months away. Is there enough time?</span><div class="faq-tog">+</div></div><div class="faq-a">It depends on where your child currently stands and how many months are left. This is not something we can answer with a yes or no without knowing more. The diagnostic assessment is particularly valuable in this situation — it tells us within one session what gaps exist and whether they are addressable in the available time. Some gaps are fixable in four to six weeks with focused work. Others may take longer. We will tell you honestly what is realistic after the assessment, not what you want to hear.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Do you have a separate point of contact for parents who are not the student?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. There is a dedicated parent support contact separate from the academic faculty. For administrative questions, fee-related queries, scheduling and general communication, parents have a point of contact who is not the tutor — so the tutor's class time is not disrupted by administrative queries. For academic questions, faculty are accessible directly.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child has been taught by a private home tutor for years. How is this different?</span><div class="faq-tog">+</div></div><div class="faq-a">A home tutor typically works 1-on-1 with a student, which has real advantages — complete attention, flexible pace, and familiarity. Jaagrut™ is different in a few ways. First, the batch of 15 provides both attention and peer learning — seeing classmates work through problems, hearing their questions and mistakes, is educationally valuable. Second, the sessions are live and recorded, which means your child has access to the full session for revision — something a home tutor session does not provide. Third, faculty with 17+ years of structured teaching experience bring a depth of curriculum knowledge that most individual tutors do not have. Whether Jaagrut™ or a home tutor is better depends on the child. The diagnostic session often clarifies this.</div></div>
+      </div>
+    </div>
+
+    <!-- ── JEE & NEET ── -->
+    <div id="fq-jee-neet" style="margin-bottom:48px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)">
+        <span style="font-size:22px">🔬</span>
+        <div><div style="font-size:18px;font-weight:800;color:var(--navy)">JEE &amp; NEET Preparation</div><div style="font-size:13px;color:var(--muted)">When to start, how it works alongside board exams, and what to expect</div></div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">When should my child start JEE or NEET preparation?</span><div class="faq-tog">−</div></div><div class="faq-a">Most serious JEE and NEET aspirants benefit from starting preparation in Class 11 itself — when the foundation of Physics, Chemistry and Maths for engineering, or Biology for medicine, is being built. Starting early does not mean rushing; it means having time to understand each concept properly before the pace picks up in Class 12. Students who try to prepare for JEE or NEET entirely in Class 12 are doing it in the year when board exam pressure is also highest — that is a very difficult combination. Starting in Class 11 gives you two years, and two years is enough when the teaching is concept-first.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can Jaagrut™ handle both board exam preparation and JEE/NEET simultaneously?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. The Class 11 and 12 curriculum at Jaagrut™ is designed with both board and competitive exam alignment in mind. The CBSE/PUC board syllabus and the JEE/NEET syllabus overlap significantly — a student who genuinely understands Class 11 and 12 Physics, Chemistry and Maths is already covering most of what JEE Mains requires. The difference lies in depth and application — which is where Jaagrut™'s concept-first approach becomes specifically valuable for competitive exam aspirants.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child is already attending a large JEE coaching institute. Can Jaagrut™ help alongside that?</span><div class="faq-tog">+</div></div><div class="faq-a">Jaagrut™ works well as a complement to a large coaching institute. Large institutes move at a fast pace, and many students find that specific topics are not fully understood before the next one begins. Jaagrut™'s small batch and concept-focused teaching can specifically address those gaps — rather than re-teaching the entire syllabus, we focus on exactly what the student has not yet understood. This is a conversation worth having with us directly based on where your child is.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">How is Jaagrut™'s JEE preparation different from large coaching institutes like FIITJEE or Allen?</span><div class="faq-tog">+</div></div><div class="faq-a">The most significant difference is batch size and individual attention. Large institutes operate with batches of 60 to 120 students, move at a fixed pace, and rely heavily on test-series performance to identify struggling students. At Jaagrut™, the batch is 15 students, which means the faculty know each student's specific weak areas. Teaching is concept-first rather than pattern-drill-first. If a student has not understood a concept, we go back to it — that flexibility does not exist in large-format coaching. For students who learn better with more attention and a slower, more deliberate pace, Jaagrut™ is a meaningfully different environment.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">My child wants to take NEET but is weak in Biology. Can Jaagrut™ help specifically with Biology?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. You can enrol for Biology alone. NEET Biology accounts for 90 of the 180 questions in the exam, and most students who score well in NEET do so because of Biology — not Physics or Chemistry. Weakness in Biology for NEET is almost always about depth of understanding, not intelligence. Students memorise labels and definitions but do not understand how systems work. Jaagrut™ teaches NEET Biology from NCERT in full depth — the kind of teaching that allows a student to answer application-based questions, not just recall-based ones.</div></div>
+        <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Does Jaagrut™ offer KCET preparation as well?</span><div class="faq-tog">+</div></div><div class="faq-a">KCET preparation is offered as part of the PUC and Class 12 curriculum for Karnataka students. The KCET syllabus is based on PUC I and PUC II content, and students who are covered thoroughly in their PUC curriculum are well-prepared for KCET. Faculty are familiar with the KCET paper pattern, the distribution of questions by subject and chapter, and the specific areas that carry more weight in KCET versus the board exam.</div></div>
+      </div>
+    </div>
+
+    <!-- Still have questions CTA -->
+    <div style="background:var(--navy);border-radius:var(--radius-lg);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px">
+      <div>
+        <div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:6px">Still have a question we haven't answered?</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.65);line-height:1.7">Call or WhatsApp us at <strong style="color:var(--orange-mid)">+91 96200 00535</strong>. We typically respond within a few hours.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="https://wa.me/919620000535" target="_blank" class="btn btn-primary">💬 WhatsApp Us</a>
+        <button class="btn btn-outline" onclick="openAssess()" style="border-color:rgba(255,255,255,.4);color:#fff">📋 Book Assessment</button>
+      </div>
+    </div>
+  </section>
+</div><!-- /pg-faqs -->
+<!-- FOOTER (shared) -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:11px">
+        <img src="./Group 4.png" alt="" width="120px;">
+      </div>
+      <p class="footer-desc">We Shape The Future, We Teach.<br>Live online tutoring for Class 9–12, JEE and NEET. Bengaluru. 17+ years of teaching experience.</p>
+      <div class="footer-contact">📍 28 RBI Colony, Anandnagar, Bengaluru 560024<br>📞 <a href="tel:+919620000535">+91 96200 00535</a><br>✉️ <a href="mailto:admin@jaagrut.in">admin@jaagrut.in</a></div>
+    </div>
+    <div>
+      <div class="f-head">Classes</div>
+      <ul class="f-links">
+        <li><span onclick="goTo('class9')">Class 9 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('class10')">Class 10 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('class11')">Class 11 &amp; 12 CBSE/ ICSE/ PUC</span></li>
+        <li><span onclick="goTo('jee')">JEE Mains</span></li>
+        <li><span onclick="goTo('neet')">NEET</span></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Quick Links</div>
+      <ul class="f-links">
+        <li><span onclick="goTo('about')">About Us</span></li>
+        <li><span onclick="goTo('syllabus')">Syllabus</span></li>
+        <li><span onclick="goTo('fees')">Fees</span></li>
+        <li><span onclick="goTo('faqs')">FAQs</span></li>
+        <li><span onclick="goTo('contact')">Contact</span></li>
+        <li><a href="#" onclick="openAssess()">Book Assessment</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="f-head">Connect</div>
+      <ul class="f-links">
+        <li><a href="https://wa.me/919620000535" target="_blank">WhatsApp Us</a></li>
+        <li><a href="tel:+919620000535">Call Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <span style="color:rgba(255,255,255,.3)">© 2026 Jaagrut™ Educational Services. All Rights Reserved. "Jaagrut™" is a registered trademark.</span>
+    <span style="color:rgba(255,255,255,.3)">CIN: U80300KA2007PTC044001 | GSTIN: ABCD1234567890DD</span>
+    <div style="display:flex;gap:14px"><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="wa-widget">
+  <div class="wa-panel" id="waPanel">
+    <div class="wa-head">
+      <div class="wa-av">🎓</div>
+      <div><div class="wa-name">Jaagrut™ Support</div><div class="wa-status"><span class="wa-online"></span> Typically replies in minutes</div></div>
+      <button class="wa-x" onclick="toggleWa()">✕</button>
+    </div>
+    <div class="wa-body"><div class="wa-msg"><strong>Jaagrut™ Team</strong>👋 Hi! How can we help you today?</div></div>
+    <div class="wa-actions">
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+want+to+book+the+assessment." target="_blank">📋 Book Assessment (₹250)</a>
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+want+to+know+the+fee+structure." target="_blank"><img src="./whatsapp.svg" style="width: 20px;" alt=""> Enquire Now</a>
+      <a class="wa-action" href="https://wa.me/919620000535?text=Hi%2C+I+have+a+question+about+Jaagrut." target="_blank">💬 General Enquiry</a>
+    </div>
+  </div>
+  <div style="position:relative">
+    <button class="wa-btn" onclick="toggleWa()">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.471 2.027 7.773L0 32l8.469-2.219A15.938 15.938 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 01-6.771-1.854l-.486-.289-5.028 1.317 1.341-4.894-.317-.502A13.267 13.267 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.907c-.397-.199-2.351-1.16-2.717-1.292-.365-.132-.631-.199-.897.199-.266.398-.797 1.026-.976 1.225-.179.199-.358.199-.664.066a8.565 8.565 0 01-2.513-1.554 9.441 9.441 0 01-1.74-2.168c-.179-.398-.019-.598.137-.798.14-.178.332-.465.498-.664.166-.199.199-.332.298-.531.099-.2.05-.398-.025-.597-.075-.2-.897-2.162-1.229-2.96-.323-.778-.65-.672-.897-.685-.233-.012-.498-.015-.764-.015-.266 0-.697.1-.1.498-.365.398-1.395 1.36-1.395 3.316s1.428 3.847 1.627 4.112c.2.265 2.81 4.292 6.809 6.018.952.41 1.694.656 2.273.84.955.304 1.824.261 2.512.158.767-.114 2.351-.961 2.684-1.89.333-.929.333-1.726.233-1.892-.1-.165-.366-.265-.764-.464z"/></svg>
+    </button>
+    <span class="wa-notif" id="waN">1</span>
+  </div>
+</div>
+
+<!-- ASSESSMENT MODAL -->
+<div class="modal-overlay" id="assessModal">
+  <div class="modal-box">
+    <div class="modal-head">
+      <div><div class="modal-title">📋 Book Maths Diagnostic Assessment</div><div class="modal-sub">Online · Adjusted on enrolment</div></div>
+      <button class="modal-x" onclick="closeAssess()">✕</button>
+    </div>
+    <div class="modal-body" id="assessBody">
+      <div class="form-notice"><strong>A genuine Maths diagnostic, not a sales call.</strong> Enrol → fee is fully adjusted. Don't enrol → live faculty session.</div>
+      <div class="form-row">
+        <div class="fg"><label>Student's Full Name *</label><input type="text" placeholder="e.g. Aryan Sharma" id="f_name"></div>
+        <div class="fg"><label>Current Grade *</label><select id="f_grade"><option value="">Select grade</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Parent Name *</label><input type="text" placeholder="e.g. Priya Sharma" id="f_parent"></div>
+        <div class="fg"><label>Mobile Number *</label><input type="tel" placeholder="+91 98XXXXXXXX" id="f_phone"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Preferred Date *</label><input type="date" id="f_date"></div>
+        <div class="fg"><label>Preferred Slot *</label><select id="f_slot"><option value="">Select slot</option><option>Morning · 9:00 AM – 11:00 AM</option><option>Afternoon · 12:00 PM – 2:00 PM</option><option>Evening · 5:00 PM – 7:00 PM</option></select></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Curriculum *</label><select id="f_board"><option value="">Select</option><option>CBSE</option><option>ICSE</option><option>PUC</option></select></div>
+        <div class="fg"><label>City *</label><input type="text" placeholder="e.g. Bengaluru" id="f_loc"><span class="hint">Classes are online. Helps with scheduling.</span></div>
+      </div>
+      <button class="form-submit" onclick="submitAssess()">Book My Assessment →</button>
+    </div>
+    <div class="form-success" id="assessOk">
+      <div class="fs-ico">✅</div>
+      <div class="fs-title">Assessment Booked!</div>
+      <div class="fs-desc">Our team will contact you within a few hours to confirm your slot and share the ₹250 payment link.<br><br><strong>Jaagrut™ · +91 96200 00535</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEE MODAL -->
+<div class="modal-overlay" id="feeModal">
+  <div class="modal-box" style="max-width:510px">
+    <div class="modal-head">
+      <div><div class="modal-title">💬 Fee Enquiry</div><div class="modal-sub">Exact fees, discounts &amp; instalment options shared personally</div></div>
+      <button class="modal-x" onclick="closeFee()">✕</button>
+    </div>
+    <div class="modal-body" id="feeBody">
+      <div class="form-row">
+        <div class="fg"><label>Your Name *</label><input type="text" placeholder="e.g. Priya Sharma" id="fm_name"></div>
+        <div class="fg"><label>Mobile Number *</label><input type="tel" placeholder="+91 98XXXXXXXX" id="fm_phone"></div>
+      </div>
+      <div class="form-row">
+        <div class="fg"><label>Child's Grade *</label><select id="fm_grade"><option value="">Select</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>JEE / NEET</option></select></div>
+        <div class="fg"><label>Subjects Interested In</label><select id="fm_subj"><option value="">Select</option><option>Maths only</option><option>Science only</option><option>Maths + Science</option><option>All 4 subjects</option><option>JEE / NEET</option><option>Not sure yet</option></select></div>
+      </div>
+      <div class="fg"><label>No. of Children Enrolling</label><select id="fm_kids"><option value="1">1 child</option><option value="2">2 children (sibling discount)</option><option value="3">3+</option></select><span class="hint">Sibling discount applies — mention it here.</span></div>
+      <button class="form-submit" onclick="submitFee()">Send Enquiry →</button>
+    </div>
+    <div class="form-success" id="feeOk">
+      <div class="fs-ico">📩</div>
+      <div class="fs-title">Enquiry Received!</div>
+      <div class="fs-desc">We'll call or WhatsApp you within a few hours with exact fees, sibling discounts and instalment options.<br><br><strong>Jaagrut™ · +91 96200 00535</strong></div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js" defer></script>
+</body>
+</html>

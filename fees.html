@@ -48,168 +48,92 @@
   </div>
 </nav>
 <!-- ════════════════════════════════
-     PAGE: HOME
+     PAGE: FEES
      ════════════════════════════════ -->
-<div class="page active" id="pg-home">
-
-  <!-- Hero -->
-  <div class="hero-main">
-    <div class="hero-left au d1">
-      <div class="hero-eyebrow"><span class="pulse-dot"></span>Class 9–12 · JEE · NEET · <span class="live"><span class="live-dot"><svg width="9" height="9" viewBox="0 0 24 24" fill="none"><path d="M15 10l4.553-2.276A1 1 0 0121 8.723v6.554a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="live-txt">LIVE</span></span></div>
-      <h1>Think deeper.<br><em>Score higher.</em></h1>
-      <p class="hero-tag">Jaagrut™ — We Shape The Future, We Teach</p>
-      <p class="hero-desc">Live online classes for Class 9 to 12, JEE and NEET. Batches of 15. Faculty with 17+ years of teaching experience, based in Bengaluru.</p>
-      <div class="hero-btns">
-        <button class="btn btn-primary btn-xl" onclick="openAssess()">📋 Book Assessment</button>
-        <a href="https://wa.me/919620000535?text=Hi%2C+I+want+to+know+the+fee+structure." class="btn btn-white btn-lg"><img src="./whatsapp.svg" style="width: 20px;" alt=""> Enquire Now</a>
-      </div>
-      <div class="hero-chips">
-        <div class="hchip"><span class="hdot"></span>Max 15 students per batch</div>
-        <div class="hchip"><span class="hdot"></span>17+ years teaching</div>
-        <div class="hchip"><span class="hdot"></span>4.9 ★ on Google</div>
-        <!-- <div class="hchip"><span class="hdot"></span>All sessions recorded</div> -->
-      </div>
-    </div>
-    <div class="hero-right au d2">
-      <div class="hero-img"><img src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=840&q=85&auto=format&fit=crop" alt="Live online class"></div>
-      <div class="hfloat hf-a"><div class="hf-ico o">🎓</div><div><div class="hf-lbl"></div><div class="hf-val">Join<br>Next batch</div></div></div>
-      <div class="hfloat hf-b"><div class="hf-ico g">⭐</div><div><div class="hf-lbl">Google Rating</div><div class="hf-val">4.9 / 5.0</div></div></div>
+<div class="page active" id="pg-fees">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span><span class="sep">›</span><span>Fees</span></div>
+      <div class="page-hero-eyebrow">Transparency · No Hidden Charges</div>
+      <h1>Fees are discussed<br>personally. Not listed.</h1>
+      <p>A fee on a webpage cannot account for your child's specific situation — which subjects, which batch, sibling discount, instalment preference. That takes a five-minute conversation.</p>
     </div>
   </div>
 
-  <!-- Stats -->
-  <div class="stat-strip">
-    <div class="stat-blk"><span class="stat-n">≤15</span><span class="stat-l">Students / Batch</span></div>
-    <div class="stat-blk"><span class="stat-n">17+</span><span class="stat-l">Years Teaching</span></div>
-    <div class="stat-blk"><span class="stat-n">4.8★</span><span class="stat-l">Google Rating</span></div>
-    <!-- <div class="stat-blk"><span class="stat-n">11 Apr</span><span class="stat-l">2026 Batch Starts</span></div> -->
-  </div>
-
-  <!-- Classes at a glance -->
-  <section>
-    <div class="tc">
-      <div class="eyebrow">What We Teach</div>
-      <h2 class="sec">Pick the right class for your child</h2>
-      <p class="sec-sub">Every class has its own dedicated page with full details on syllabus, schedule and what to expect.</p>
-    </div>
-    <div class="grid-3" style="margin-top:40px">
-      <div class="card au d1" onclick="goTo('class9')" style="cursor:pointer">
-        <span class="card-ico">📗</span>
-        <div class="card-title">Class 9 CBSE/ ICSE/ PUC</div>
-        <div class="card-desc" style="margin-bottom:14px">Build the foundation before Class 10 board pressure arrives. Maths and Science covered thoroughly.</div>
-        <div class="subj-badges"><span class="sbadge ma">Maths</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span><span class="sbadge bi">Biology</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-      <div class="card au d2" onclick="goTo('class10')" style="cursor:pointer;border-color:var(--orange);box-shadow:0 4px 22px rgba(244,130,31,.12)">
-        <span class="card-ico">📘</span>
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px"><div class="card-title" style="margin:0">Class 10 CBSE/ ICSE/ PUC</div><span style="background:var(--orange);color:#fff;font-size:10px;font-weight:800;padding:3px 9px;border-radius:7px">Featured</span></div>
-        <div class="card-desc" style="margin-bottom:14px">Board year. Our most popular batch. Concept-driven teaching across all four subjects. Batch starts 11 April 2026.</div>
-        <div class="subj-badges"><span class="sbadge ma">Maths</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span><span class="sbadge bi">Biology</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-      <div class="card au d3" onclick="goTo('class11')" style="cursor:pointer">
-        <span class="card-ico">📙</span>
-        <div class="card-title">Class 11 &amp; 12 CBSE/ ICSE/ PUC</div>
-        <div class="card-desc" style="margin-bottom:14px">Board preparation alongside a strong conceptual base. Lays the groundwork for JEE and NEET aspirants too.</div>
-        <div class="subj-badges"><span class="sbadge ma">Maths</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span><span class="sbadge bi">Biology</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-      <div class="card au d1" onclick="goTo('jee')" style="cursor:pointer">
-        <span class="card-ico">🔬</span>
-        <div class="card-title">JEE Mains</div>
-        <div class="card-desc" style="margin-bottom:14px">Problem solving built on real understanding of Physics, Chemistry and Mathematics. Not just pattern drills.</div>
-        <div class="subj-badges"><span class="sbadge ma">Maths</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-      <div class="card au d2" onclick="goTo('neet')" style="cursor:pointer">
-        <span class="card-ico">🩺</span>
-        <div class="card-title">NEET</div>
-        <div class="card-desc" style="margin-bottom:14px">Biology, Physics and Chemistry for NEET aspirants. The same thorough, concept-first approach applied to medical entrance.</div>
-        <div class="subj-badges"><span class="sbadge bi">Biology</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-      <div class="card au d2" onclick="goTo('neet')" style="cursor:pointer">
-        <span class="card-ico">🩺</span>
-        <div class="card-title">JUNIORS 6/7/8</div>
-        <div class="card-desc" style="margin-bottom:14px">Biology, Physics and Chemistry for NEET aspirants. The same thorough, concept-first approach applied to medical entrance.</div>
-        <div class="subj-badges"><span class="sbadge bi">Biology</span><span class="sbadge ph">Physics</span><span class="sbadge ch">Chemistry</span></div>
-        <div style="margin-top:14px;font-size:13px;font-weight:700;color:var(--orange)">View details →</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Jaagrut – 4 pillars -->
+  <!-- Fee principles -->
   <section class="cream-sec">
     <div class="tc">
-      <div class="eyebrow">Why Jaagrut™</div>
-      <h2 class="sec">Four things that set us apart</h2>
+      <div class="eyebrow">How Fees Work</div>
+      <h2 class="sec">What you need to know before asking</h2>
     </div>
-    <div class="grid-4" style="margin-top:40px">
-      <div class="card au d1">
-        <span class="card-ico">👥</span>
-        <div class="card-title">Max 15 students per batch</div>
-        <div class="card-desc">Every child is seen and heard. Faculty track individual progress and step in early when a student struggles.</div>
-      </div>
-      <div class="card au d2">
-        <span class="card-ico">📖</span>
-        <div class="card-title">NCERT + previous year focus</div>
-        <div class="card-desc">Your child masters the right books without the stress of unnecessary extra material.</div>
-      </div>
-      <div class="card au d3">
-        <span class="card-ico">🎥</span>
-        <div class="card-title">Live classes</div>
-        <div class="card-desc">All classes are live. Missed one? We make sure you still get covered live.</div>
-      </div>
-      <div class="card au d4">
-        <span class="card-ico">🏆</span>
-        <div class="card-title">17+ years of experience</div>
-        <div class="card-desc">Deep knowledge of exam formats, syllabus, and how to get your child exam-ready.</div>
-      </div>
+    <div class="grid-4" style="margin-top:36px">
+      <div class="card au d1"><span class="card-ico">📚</span><div class="card-title">Subject-based pricing</div><div class="card-desc">Enrol for one subject or all four. No bundling pressure. You pay for what your child needs.</div></div>
+      <div class="card au d2"><span class="card-ico">👨‍👩‍👧</span><div class="card-title">Sibling discount</div><div class="card-desc">Enrolling two children? Mention it when you enquire. A discount applies.</div></div>
+      <div class="card au d3"><span class="card-ico">📆</span><div class="card-title">Monthly instalments</div><div class="card-desc">Annual fee is standard. Monthly instalment plans are available on request.</div></div>
+      <div class="card au d4"><span class="card-ico">🛡️</span><div class="card-title">No hidden charges</div><div class="card-desc">Your child gets everything they need — all within the fee you've already paid.</div></div>
     </div>
   </section>
 
-  <!-- Testimonials -->
+  <!-- Assessment fee -->
   <section>
-    <div class="tc">
-      <div class="eyebrow">Parent Reviews</div>
-      <h2 class="sec">What families say</h2>
-    </div>
-    <div class="grid-3" style="margin-top:40px">
-      <div class="t-card au d1">
-        <div class="t-qmark">"</div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">My son Mohnish has started liking Maths more than ever before — something I never expected. I strongly recommend Jaagrut™ for students who need real guidance.</p>
-        <div class="t-author"><div class="t-av" style="background:var(--sky)">🎓</div><div><div class="t-name">Dr. Kavitha</div><div class="t-role">Parent · Bengaluru</div></div></div>
+    <div class="grid-2" style="gap:48px;align-items:start">
+      <div>
+        <div class="eyebrow">The Only Fee Listed Here</div>
+        <h2 class="sec">₹250 Maths Diagnostic Assessment</h2>
+        <p class="sec-sub" style="margin-bottom:20px">Before we discuss course fees, we conduct a structured Maths diagnostic. This is a genuine evaluation — not a sales call.</p>
+        <div style="background:#fff;border:2px solid var(--orange);border-radius:var(--radius);padding:22px;margin-bottom:16px">
+          <div style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px">🧪 Maths Diagnostic — ₹250</div>
+          <div class="checklist">
+            <div class="check"><span class="check-ico">✅</span>Class 9 CBSE/ ICSE/ PUC Maths prerequisites. Online. Short.</div>
+            <div class="check"><span class="check-ico">✅</span>Adjusted in full against course fee on enrolment</div>
+          </div>
+          <button class="btn btn-primary" onclick="openAssess()" style="margin-top:16px;width:100%;justify-content:center">📋 Book Assessment → ₹250</button>
+        </div>
+        <div class="info-box navy"><span style="font-size:17px;flex-shrink:0">ℹ️</span><span>The ₹250 is not a registration fee. It is the cost of a real evaluation that gives both you and us useful information about where your child stands.</span></div>
       </div>
-      <div class="t-card au d2">
-        <div class="t-qmark">"</div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">My daughter scored 94% in CBSE boards and secured a BTech CET seat at a prestigious Bengaluru college. Gaurav Sir and Shashi Ma'am were outstanding.</p>
-        <div class="t-author"><div class="t-av" style="background:var(--orange-lt)">⭐</div><div><div class="t-name">Manohar Shenoy</div><div class="t-role">Parent · Bengaluru</div><div class="t-result">Daughter, 94% CBSE 10th</div></div></div>
-      </div>
-      <div class="t-card au d3">
-        <div class="t-qmark">"</div>
-        <div class="t-stars">★★★★★</div>
-        <p class="t-text">My son holds scholarships from institutions in Germany today — far beyond what we initially hoped for. Gaurav ji and the team are exceptional educators.</p>
-        <div class="t-author"><div class="t-av" style="background:var(--green-lt)">🏆</div><div><div class="t-name">Ravi A</div><div class="t-role">Parent · Bengaluru</div><div class="t-result">Son, international scholarship</div></div></div>
+      <div>
+        <div class="eyebrow">Course Fees</div>
+        <h2 class="sec">Get the exact fee in 5 minutes</h2>
+        <p class="sec-sub" style="margin-bottom:20px">Fill the form below. Our team will share the fee breakdown, applicable discounts and instalment options within a few hours.</p>
+        <div style="background:var(--cream);border-radius:var(--radius-lg);padding:26px;border:1.5px solid var(--border)">
+          <div style="font-size:14px;font-weight:800;color:var(--navy);margin-bottom:14px">📩 Fee Enquiry Form</div>
+          <div class="form-row">
+            <div class="fg"><label>Your Name *</label><input type="text" placeholder="e.g. Priya Sharma" id="ff_name"></div>
+            <div class="fg"><label>Mobile Number *</label><input type="tel" placeholder="+91 98XXXXXXXX" id="ff_phone"></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>Child's Grade *</label><select id="ff_grade"><option value="">Select grade</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>JEE / NEET</option></select></div>
+            <div class="fg"><label>Subjects Interested In</label><select id="ff_subj"><option value="">Select</option><option>Maths only</option><option>Science only</option><option>Maths + Science</option><option>All 4 subjects</option><option>JEE / NEET</option><option>Not sure yet</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="fg"><label>No. of Children</label><select id="ff_kids"><option value="1">1 child</option><option value="2">2 children (sibling discount)</option><option value="3">3+</option></select></div>
+            <div class="fg"><label>Payment Preference</label><select id="ff_pay"><option>Monthly</option><option>Annually</option><option>Not sure</option></select></div>
+          </div>
+          <button class="form-submit" id="feePageSubmit" onclick="submitFeePage()">Send Enquiry →</button>
+          <div id="feePageOk" style="display:none;text-align:center;padding:16px 0">
+            <div style="font-size:36px;margin-bottom:8px">📩</div>
+            <div style="font-size:16px;font-weight:800;color:var(--green);margin-bottom:6px">Enquiry Received!</div>
+            <div style="font-size:13px;color:var(--muted)">We'll call or WhatsApp you within a few hours with the full fee breakdown.</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <div class="cta-band">
-    <div class="cta-inner">
-      <h2>"Do the right thing the right way, and the outcome will take care of itself."</h2>
-      <p>Start with a Maths diagnostic. Batch of 15. Starting 11 April 2026.</p>
-      <div class="cta-btns">
-        <button class="btn btn-primary btn-xl" onclick="openAssess()">📋 Book Assessment</button>
-        <a href="https://wa.me/919620000535?text=Hi%2C+I+want+to+know+the+fee+structure." class="btn btn-white btn-lg"><img src="./whatsapp.svg" style="width: 20px;" alt=""> Enquire Now</a>
-      </div>
-      <div class="cta-note">₹250 fully adjusted on enrolment · No lock-in contracts</div>
+  <!-- FAQ on fees -->
+  <section class="sky-sec">
+    <div class="tc" style="margin-bottom:32px">
+      <div class="eyebrow">Common Questions</div>
+      <h2 class="sec">Fee FAQs</h2>
     </div>
-  </div>
-
-</div><!-- /pg-home -->
+    <div class="faq-list" style="max-width:760px;margin:0 auto">
+      <div class="faq-item open"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Can I enrol my child for just one subject?</span><div class="faq-tog">−</div></div><div class="faq-a">Yes. Jaagrut™ has subject-based pricing. You can enrol for Maths only, Science only, or any combination. There is no pressure to take all four subjects.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is the ₹250 assessment fee refunded if I don't enrol?</span><div class="faq-tog">+</div></div><div class="faq-a">The ₹250 is not refunded if you choose not to enrol — but you do receive a live faculty session, which is of real value in itself. If you do enrol, the ₹250 is fully adjusted against your course fee.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Do you have monthly instalment plans?</span><div class="faq-tog">+</div></div><div class="faq-a">Annual fee is the standard structure. Monthly instalment plans are available on request. Please mention your preference when you fill the fee enquiry form.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span class="faq-qt">Is there a sibling discount?</span><div class="faq-tog">+</div></div><div class="faq-a">Yes. If you are enrolling two children, please mention it in the enquiry form and we will factor in the sibling discount before you finalise.</div></div>
+    </div>
+  </section>
+</div><!-- /pg-fees -->
 <!-- FOOTER (shared) -->
 <footer>
   <div class="footer-grid">
